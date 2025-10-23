@@ -1,3 +1,76 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-bg",
+      "description": "Sunrise over a serene mountain landscape, representing peace and new beginnings.",
+      "imageUrl": "https://images.unsplash.com/photo-1595495745827-85bcc5c9a028?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtb3VudGFpbiUyMHN1bnJpc2V8ZW58MHx8fHwxNzYxMTg5NDE2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mountain sunrise"
+    },
+    {
+      "id": "video-1",
+      "description": "A guru giving a discourse.",
+      "imageUrl": "https://images.unsplash.com/photo-1629875213644-e55d7578e4c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzcGlyaXR1YWwlMjB0ZWFjaGVyfGVufDB8fHx8MTc2MTIxMTA0MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "spiritual teacher"
+    },
+    {
+      "id": "video-2",
+      "description": "Meditation by a lake.",
+      "imageUrl": "https://images.unsplash.com/photo-1709580061994-f76359f5c6e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtZWRpdGF0aW9uJTIwbGFrZXxlbnwwfHx8fDE3NjEyMTM5MTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "meditation lake"
+    },
+    {
+      "id": "video-3",
+      "description": "Ancient temple architecture.",
+      "imageUrl": "https://images.unsplash.com/photo-1566915682737-3e97a7eed93b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxpbmRpYW4lMjB0ZW1wbGV8ZW58MHx8fHwxNzYxMTU2MDM3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "indian temple"
+    },
+    {
+      "id": "video-4",
+      "description": "A person practicing yoga at sunrise.",
+      "imageUrl": "https://images.unsplash.com/photo-1646166468261-b18339c92fda?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx5b2dhJTIwc3VucmlzZXxlbnwwfHx8fDE3NjExODMxMzZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "yoga sunrise"
+    },
+    {
+      "id": "video-5",
+      "description": "Close-up of a lotus flower.",
+      "imageUrl": "https://images.unsplash.com/photo-1605799919616-cce57afc06e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bG90dXMlMjBmbG93ZXJ8ZW58MHx8fHwxNzYxMTE4OTE4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "lotus flower"
+    },
+    {
+      "id": "video-6",
+      "description": "Hands in a prayer mudra.",
+      "imageUrl": "https://images.unsplash.com/photo-1554566205-d2a9e64cc5e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwcmF5aW5nJTIwaGFuZHN8ZW58MHx8fHwxNzYxMDkxMzEzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "praying hands"
+    },
+    {
+      "id": "video-7",
+      "description": "Aarti ceremony on the Ganges river.",
+      "imageUrl": "https://images.unsplash.com/photo-1605818725676-23c12926e41f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxnYW5nZXMlMjBjZXJlbW9ueXxlbnwwfHx8fDE3NjEyMTM5MTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ganges ceremony"
+    },
+    {
+      "id": "video-8",
+      "description": "A group of people chanting.",
+      "imageUrl": "https://images.unsplash.com/photo-1595424307974-f0d1195b69a1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxncm91cCUyMGNoYW50aW5nfGVufDB8fHx8MTc2MTIxMzkxOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "group chanting"
+    },
+    {
+      "id": "video-9",
+      "description": "A book of scriptures.",
+      "imageUrl": "https://images.unsplash.com/photo-1759333344417-4116f7c5cf28?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxhbmNpZW50JTIwc2NyaXB0dXJlc3xlbnwwfHx8fDE3NjEyMTEwNDF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ancient scriptures"
+    },
+    {
+      "id": "video-10",
+      "description": "Traditional Indian music instruments.",
+      "imageUrl": "https://images.unsplash.com/photo-1676804899250-18a342d77e16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxpbmRpYW4lMjBpbnN0cnVtZW50c3xlbnwwfHx8fDE3NjEyMTM5MjB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "indian instruments"
+    },
+    {
+      "id": "about-us-img",
+      "description": "A team of volunteers working together.",
+      "imageUrl": "https://images.unsplash.com/photo-1568992687947-868a62a9f521?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx0ZWFtJTIwbWVldGluZ3xlbnwwfHx8fDE3NjEyMTA4MDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "team meeting"
+    }
+  ]
 }
