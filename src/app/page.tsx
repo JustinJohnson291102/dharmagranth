@@ -38,25 +38,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
         <div className="relative h-full flex flex-col items-center justify-end text-center p-4 md:p-8">
           <div className="container max-w-4xl pb-16">
-            <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold tracking-tighter mb-4 text-foreground animate-fade-in-up">
-              Discover Peace Within
-            </h1>
-            <p className="max-w-2xl mx-auto text-muted-foreground md:text-xl mb-8 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              Your home for dharmic teachings, spiritual wisdom, and cultural heritage. Stream live or explore our vast video library.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-              <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                <Link href="/live">
-                  <PlayCircle className="mr-2 h-5 w-5" />
-                  Watch Live
-                </Link>
-              </Button>
-              <Button asChild size="lg" variant="outline">
-                <Link href="/videos">
-                  Explore Videos
-                </Link>
-              </Button>
-            </div>
+            
           </div>
         </div>
       </section>
