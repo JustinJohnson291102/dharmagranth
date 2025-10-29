@@ -285,12 +285,12 @@ const CarouselDots = () => {
     const { scrollSnaps, selectedIndex, scrollTo } = useCarousel();
   
     return (
-      <div className="flex items-center justify-center gap-2 pt-4">
+      <div className="flex items-center justify-center gap-2 pt-8">
         {scrollSnaps.map((_, index) => (
           <button
             key={index}
             className={cn(
-              "h-2 w-2 rounded-full transition-colors",
+              "h-2 w-4 rounded-sm transition-colors",
               selectedIndex === index ? "bg-primary" : "bg-primary/30"
             )}
             onClick={() => scrollTo(index)}
