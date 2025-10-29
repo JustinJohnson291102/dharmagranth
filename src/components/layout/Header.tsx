@@ -4,16 +4,16 @@ import React from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import Logo from '@/components/Logo';
-import { Menu, Tv, Clapperboard, Calendar, Info, Mail, LogIn, UserPlus } from 'lucide-react';
+import { Menu, Tv, Calendar, Info, Mail, LogIn, UserPlus, Home } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
 
 const navLinks = [
-  { href: '/live', label: 'Live TV', icon: Tv },
-  { href: '/videos', label: 'Video Library', icon: Clapperboard },
-  { href: '/schedule', label: 'Program Guide', icon: Calendar },
-  { href: '/about', label: 'About Us', icon: Info },
+  { href: '/', label: 'Home', icon: Home },
+  { href: '/about', label: 'About', icon: Info },
   { href: '/contact', label: 'Contact', icon: Mail },
+  { href: '/schedule', label: 'TV Guide', icon: Calendar },
+  { href: '/live', label: 'Live TV', icon: Tv },
 ];
 
 const NavLink = ({ href, children, className }: { href: string; children: React.ReactNode, className?: string }) => (
