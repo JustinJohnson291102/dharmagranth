@@ -1,14 +1,7 @@
-import Image from 'next/image';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
+import Logo from '@/components/Logo';
 import { Heart, Globe, BookOpen } from 'lucide-react';
 
-const getPlaceholderImage = (id: string) => {
-  return PlaceHolderImages.find(img => img.id === id);
-}
-
 export default function AboutPage() {
-  const aboutImage = getPlaceholderImage('about-us-img');
-
   return (
     <div className="bg-card">
       <div className="container py-16 md:py-24">
@@ -22,17 +15,8 @@ export default function AboutPage() {
               We believe in the power of media to uplift and transform lives. Through our live broadcasts, video library, and community engagement, we aim to create a sanctuary for spiritual seekers everywhere.
             </p>
           </div>
-          <div>
-            {aboutImage && (
-              <Image
-                src={aboutImage.imageUrl}
-                alt={aboutImage.description}
-                width={800}
-                height={600}
-                className="rounded-lg shadow-lg"
-                data-ai-hint={aboutImage.imageHint}
-              />
-            )}
+          <div className="flex items-center justify-center">
+            <Logo className="w-full max-w-sm h-auto" />
           </div>
         </div>
         
