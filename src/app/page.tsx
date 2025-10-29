@@ -11,6 +11,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
+  CarouselDots,
 } from "@/components/ui/carousel"
 import VideoCard from '@/components/videos/VideoCard';
 import { Badge } from '@/components/ui/badge';
@@ -48,7 +49,7 @@ export default function Home() {
             src={heroImage.imageUrl}
             alt={heroImage.description}
             fill
-            className="object-fill"
+            className="object-cover"
             priority
             data-ai-hint={heroImage.imageHint}
           />
@@ -64,94 +65,52 @@ export default function Home() {
         <div className="container px-4 md:px-6">
           <div className="mb-12">
             <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-5xl mb-4">Our Programs</h2>
-            <Carousel opts={{ align: "start", loop: true }} className="w-full" withDots>
+            <Carousel opts={{ align: "start", loop: true }} className="w-full">
               <CarouselContent>
                 {ourPrograms.map((program) => (
-                  <CarouselItem key={program.id} className="md:basis-1/2 lg:basis-1/4">
+                  <CarouselItem key={program.id} className="md:basis-1/2 lg:basis-1/3">
                     <div className="p-1 h-full">
-                       <Card className="overflow-hidden transition-all hover:shadow-lg hover:-translate-y-1 h-full flex flex-col bg-white">
-                          <Link href={`/videos`} className="block group">
-                            <div className="relative aspect-video">
-                              <Image
-                                src={program.imageUrl}
-                                alt={program.title}
-                                fill
-                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                className="object-cover"
-                                data-ai-hint={program.imageHint}
-                              />
-                              <div className="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                                <PlayCircle className="h-12 w-12 text-white" />
-                              </div>
-                            </div>
-                          </Link>
-                          <CardHeader>
-                            <CardTitle className="text-lg font-headline leading-tight">
-                              <Link href={`/videos`}>{program.title}</Link>
-                            </CardTitle>
-                          </CardHeader>
-                          <CardContent className="flex-grow">
-                            <p className="text-sm text-muted-foreground line-clamp-2">
-                              {program.description}
-                            </p>
-                          </CardContent>
-                          <CardFooter className="flex gap-2 flex-wrap pt-4">
-                            <Badge variant="secondary">{program.genre}</Badge>
-                            <Badge variant="outline">{program.teacher}</Badge>
-                          </CardFooter>
-                        </Card>
+                       <VideoCard video={{
+                          id: program.id,
+                          title: program.title,
+                          description: program.description,
+                          thumbnailUrl: program.imageUrl,
+                          thumbnailHint: program.imageHint,
+                          genre: program.genre,
+                          teacher: program.teacher,
+                       }} />
                     </div>
                   </CarouselItem>
                 ))}
               </CarouselContent>
               <CarouselPrevious className="hidden sm:flex" />
               <CarouselNext className="hidden sm:flex" />
+              <CarouselDots />
             </Carousel>
           </div>
-          <div className='mt-16'>
+          <div className='mt-24'>
             <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-5xl mb-4">Coming Soon</h2>
-            <Carousel opts={{ align: "start", loop: true }} className="w-full" withDots>
+            <Carousel opts={{ align: "start", loop: true }} className="w-full">
               <CarouselContent>
                 {comingSoon.map((program) => (
-                  <CarouselItem key={program.id} className="md:basis-1/2 lg:basis-1/4">
+                  <CarouselItem key={program.id} className="md:basis-1/2 lg:basis-1/3">
                      <div className="p-1 h-full">
-                        <Card className="overflow-hidden transition-all hover:shadow-lg hover:-translate-y-1 h-full flex flex-col bg-white">
-                          <Link href={`/videos`} className="block group">
-                            <div className="relative aspect-video">
-                              <Image
-                                src={program.imageUrl}
-                                alt={program.title}
-                                fill
-                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                className="object-cover"
-                                data-ai-hint={program.imageHint}
-                              />
-                              <div className="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                                <PlayCircle className="h-12 w-12 text-white" />
-                              </div>
-                            </div>
-                          </Link>
-                          <CardHeader>
-                            <CardTitle className="text-lg font-headline leading-tight">
-                              <Link href={`/videos`}>{program.title}</Link>
-                            </CardTitle>
-                          </CardHeader>
-                          <CardContent className="flex-grow">
-                            <p className="text-sm text-muted-foreground line-clamp-2">
-                              {program.description}
-                            </p>
-                          </CardContent>
-                          <CardFooter className="flex gap-2 flex-wrap pt-4">
-                            <Badge variant="secondary">{program.genre}</Badge>
-                            <Badge variant="outline">{program.teacher}</Badge>
-                          </CardFooter>
-                        </Card>
+                        <VideoCard video={{
+                            id: program.id,
+                            title: program.title,
+                            description: program.description,
+                            thumbnailUrl: program.imageUrl,
+                            thumbnailHint: program.imageHint,
+                            genre: program.genre,
+                            teacher: program.teacher,
+                        }} />
                     </div>
                   </CarouselItem>
                 ))}
               </CarouselContent>
               <CarouselPrevious className="hidden sm:flex" />
               <CarouselNext className="hidden sm:flex" />
+              <CarouselDots />
             </Carousel>
           </div>
         </div>
