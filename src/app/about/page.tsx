@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Heart, Globe, BookOpen } from 'lucide-react';
+import { Heart, Globe, BookOpen, Eye } from 'lucide-react';
 
 export default function AboutPage() {
   return (
@@ -24,6 +24,27 @@ export default function AboutPage() {
               className="w-3/4 h-auto"
             />
           </div>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-12 items-center mt-24">
+            <div className="flex items-center justify-center">
+                <Image
+                src="https://ik.imagekit.io/ggelm1lwa/_Pngtree_tv-shape-red-live-icon_5602091-removebg-preview.png?updatedAt=1761748975338"
+                alt="Our Vision"
+                width={500}
+                height={500}
+                className="w-3/4 h-auto"
+                />
+            </div>
+            <div>
+                <h1 className="text-4xl md:text-5xl font-headline font-bold mb-6">Our Vision</h1>
+                <p className="text-lg text-muted-foreground mb-4">
+                Our vision is to be the leading global platform for dharmic and spiritual content, fostering a world where ancient wisdom is accessible to all, and every individual is empowered to live a life of purpose, balance, and inner harmony.
+                </p>
+                <p className="text-lg text-muted-foreground">
+                We envision a future where technology and spirituality converge to create a global community of seekers, united by a shared quest for knowledge, self-discovery, and universal well-being.
+                </p>
+            </div>
         </div>
         
         <div className="mt-24 text-center">
