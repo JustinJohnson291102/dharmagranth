@@ -6,21 +6,15 @@ import { Button } from '@/components/ui/button';
 import Logo from '@/components/Logo';
 import { Menu, Tv, Calendar, Info, Mail, LogIn, UserPlus, Home } from 'lucide-react';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { cn } from '@/lib/utils';
+import NavLinks from './NavLinks';
 
-const navLinks = [
-  { href: '/', label: 'Home', icon: Home },
-  { href: '/about', label: 'About', icon: Info },
-  { href: '/contact', label: 'Contact', icon: Mail },
-  { href: '/schedule', label: 'TV Guide', icon: Calendar },
-  { href: '/live', label: 'Live TV', icon: Tv },
+const mobileNavLinks = [
+    { href: '/', label: 'Home', icon: Home },
+    { href: '/about', label: 'About', icon: Info },
+    { href: '/contact', label: 'Contact', icon: Mail },
+    { href: '/schedule', label: 'TV Guide', icon: Calendar },
+    { href: '/live', label: 'Live TV', icon: Tv },
 ];
-
-const NavLink = ({ href, children, className }: { href: string; children: React.ReactNode, className?: string }) => (
-  <Link href={href} className={cn("text-lg font-medium text-foreground/80 transition-colors hover:text-foreground", className)}>
-    {children}
-  </Link>
-);
 
 const MobileNavLink = ({ href, children, onSelect }: { href: string; children: React.ReactNode, onSelect: () => void }) => (
     <Link href={href} onClick={onSelect} className="flex items-center gap-4 px-4 py-3 text-lg font-medium text-foreground/80 transition-colors hover:text-foreground hover:bg-muted rounded-md">
@@ -41,13 +35,7 @@ export default function Header() {
           </Link>
         </div>
 
-        <nav className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <NavLink key={link.href} href={link.href}>
-              {link.label}
-            </NavLink>
-          ))}
-        </nav>
+        <NavLinks />
 
         <div className="flex flex-1 items-center justify-end gap-2">
           <Button variant="ghost" size="sm" asChild className="hidden md:inline-flex">
@@ -77,7 +65,7 @@ export default function Header() {
                     <span className="font-headline text-xl font-bold text-primary">Dharmagranth TV</span>
                 </Link>
                 <div className="flex flex-col gap-2">
-                    {navLinks.map((link) => (
+                    {mobileNavLinks.map((link) => (
                         <MobileNavLink key={link.href} href={link.href} onSelect={() => setIsOpen(false)}>
                             <link.icon className="h-5 w-5" />
                             {link.label}
