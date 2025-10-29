@@ -28,33 +28,35 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-32 items-center">
-        <div className="flex items-center">
+        <div className="flex items-center mr-auto">
           <Link href="/" className="flex items-center gap-2">
             <Logo />
           </Link>
         </div>
 
-        <div className="flex-1 justify-center hidden md:flex">
+        <div className="hidden md:flex items-center gap-4">
           <NavLinks />
+        
+          <div className="flex items-center gap-2">
+            <Button variant="ghost" size="sm" asChild className="hidden md:inline-flex">
+              <Link href="/login">
+                <LogIn className="mr-2 h-4 w-4" />
+                Login
+              </Link>
+            </Button>
+            <Button size="sm" asChild className="hidden md:inline-flex">
+              <Link href="/register">
+                <UserPlus className="mr-2 h-4 w-4" />
+                Register
+              </Link>
+            </Button>
+          </div>
         </div>
 
-        <div className="flex flex-1 items-center justify-end gap-2">
-          <Button variant="ghost" size="sm" asChild className="hidden md:inline-flex">
-            <Link href="/login">
-              <LogIn className="mr-2 h-4 w-4" />
-              Login
-            </Link>
-          </Button>
-          <Button size="sm" asChild className="hidden md:inline-flex">
-            <Link href="/register">
-              <UserPlus className="mr-2 h-4 w-4" />
-              Register
-            </Link>
-          </Button>
-
+        <div className="flex items-center justify-end md:hidden">
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="md:hidden">
+              <Button variant="ghost" size="icon">
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Toggle Menu</span>
               </Button>
