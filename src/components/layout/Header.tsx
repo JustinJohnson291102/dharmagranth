@@ -31,7 +31,6 @@ export default function Header() {
         <div className="mr-6 flex items-center">
           <Link href="/" className="flex items-center gap-2">
             <Logo />
-            <span className="hidden sm:inline-block font-headline text-xl font-bold text-primary">Dharmagranth TV</span>
           </Link>
         </div>
 
@@ -62,7 +61,6 @@ export default function Header() {
               <div className="p-4">
                 <Link href="/" onClick={() => setIsOpen(false)} className="mb-8 flex items-center gap-2">
                     <Logo />
-                    <span className="font-headline text-xl font-bold text-primary">Dharmagranth TV</span>
                 </Link>
                 <div className="flex flex-col gap-2">
                     {mobileNavLinks.map((link) => (

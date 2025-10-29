@@ -20,7 +20,6 @@ export default function Footer() {
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2">
               <Logo />
-              <span className="font-headline text-xl font-bold text-primary">Dharmagranth TV</span>
             </Link>
             <p className="text-sm text-muted-foreground max-w-xs">
               Promoting dharmic values and teachings through spiritual media for a peaceful and enlightened life.
