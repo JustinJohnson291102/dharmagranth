@@ -28,13 +28,15 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-32 items-center">
-        <div className="mr-6 flex items-center">
+        <div className="flex items-center">
           <Link href="/" className="flex items-center gap-2">
             <Logo />
           </Link>
         </div>
 
-        <NavLinks />
+        <div className="flex-1 justify-center hidden md:flex">
+          <NavLinks />
+        </div>
 
         <div className="flex flex-1 items-center justify-end gap-2">
           <Button variant="ghost" size="sm" asChild className="hidden md:inline-flex">
