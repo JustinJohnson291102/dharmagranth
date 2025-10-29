@@ -17,7 +17,7 @@ const navLinks = [
 ];
 
 const NavLink = ({ href, children, className }: { href: string; children: React.ReactNode, className?: string }) => (
-  <Link href={href} className={cn("text-sm font-medium text-foreground/80 transition-colors hover:text-foreground", className)}>
+  <Link href={href} className={cn("text-lg font-medium text-foreground/80 transition-colors hover:text-foreground", className)}>
     {children}
   </Link>
 );
@@ -41,7 +41,7 @@ export default function Header() {
           </Link>
         </div>
 
-        <nav className="hidden md:flex items-center gap-6 text-sm">
+        <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <NavLink key={link.href} href={link.href}>
               {link.label}
