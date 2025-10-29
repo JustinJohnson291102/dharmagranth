@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { videos, schedule } from '@/lib/data';
 import { ArrowRight, PlayCircle, Calendar } from 'lucide-react';
@@ -13,25 +13,26 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 import VideoCard from '@/components/videos/VideoCard';
+import { Badge } from '@/components/ui/badge';
 
 const getPlaceholderImage = (id: string) => {
   return PlaceHolderImages.find(img => img.id === id);
 }
 
 const ourPrograms = [
-    { id: '1', title: 'Morning Chants', imageUrl: 'https://images.unsplash.com/photo-1595424307974-f0d1195b69a1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxncm91cCUyMGNoYW50aW5nfGVufDB8fHx8MTc2MTIxMzkxOXww&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'group chanting' },
-    { id: '2', title: 'Yoga Session', imageUrl: 'https://images.unsplash.com/photo-1646166468261-b18339c92fda?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx5b2dhJTIwc3VucmlzZXxlbnwwfHx8fDE3NjExODMxMzZ8MA&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'yoga sunrise' },
-    { id: '3', title: 'Spiritual Discourse', imageUrl: 'https://images.unsplash.com/photo-1629875213644-e55d7578e4c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzcGlyaXR1YWwlMjB0ZWFjaGVyfGVufDB8fHx8MTc2MTIxMTA0MXww&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'spiritual teacher' },
-    { id: '4', title: 'Evening Kirtan', imageUrl: 'https://images.unsplash.com/photo-1582852239686-271618335559?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjBtdXNpY2lhbnN8ZW58MHx8fHwxNzYxMjg4ODgyfDA&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'indian musicians' },
-    { id: '5', title: 'Guided Meditation', imageUrl: 'https://images.unsplash.com/photo-1709580061994-f76359f5c6e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtZWRpdGF0aW9uJTIwbGFrZXxlbnwwfHx8fDE3NjEyMTM5MTl8MA&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'meditation lake' }
+    { id: '1', title: 'Morning Chants', description: 'Start your day with sacred mantras.', imageUrl: 'https://images.unsplash.com/photo-1595424307974-f0d1195b69a1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxncm91cCUyMGNoYW50aW5nfGVufDB8fHx8MTc2MTIxMzkxOXww&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'group chanting', genre: 'Chanting', teacher: 'Community' },
+    { id: '2', title: 'Yoga Session', description: 'A gentle yoga session to energize your body.', imageUrl: 'https://images.unsplash.com/photo-1646166468261-b18339c92fda?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx5b2dhJTIwc3VucmlzZXxlbnwwfHx8fDE3NjExODMxMzZ8MA&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'yoga sunrise', genre: 'Yoga', teacher: 'Various' },
+    { id: '3', title: 'Spiritual Discourse', description: 'Talks on Vedanta and mindful living.', imageUrl: 'https://images.unsplash.com/photo-1629875213644-e55d7578e4c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzcGlyaXR1YWwlMjB0ZWFjaGVyfGVufDB8fHx8MTc2MTIxMTA0MXww&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'spiritual teacher', genre: 'Discourse', teacher: 'Various' },
+    { id: '4', title: 'Evening Kirtan', description: 'Devotional chanting to soothe the soul.', imageUrl: 'https://images.unsplash.com/photo-1582852239686-271618335559?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjBtdXNpY2lhbnN8ZW58MHx8fHwxNzYxMjg4ODgyfDA&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'indian musicians', genre: 'Music', teacher: 'Community' },
+    { id: '5', title: 'Guided Meditation', description: 'A session to calm the mind before sleep.', imageUrl: 'https://images.unsplash.com/photo-1709580061994-f76359f5c6e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtZWRpdGF0aW9uJTIwbGFrZXxlbnwwfHx8fDE3NjEyMTM5MTl8MA&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'meditation lake', genre: 'Meditation', teacher: 'Various' }
 ];
 
 const comingSoon = [
-    { id: '1', title: 'Ancient Scriptures', imageUrl: 'https://images.unsplash.com/photo-1759333344417-4116f7c5cf28?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxhbmNpZW50JTIwc2NyaXB0dXJlc3xlbnwwfHx8fDE3NjEyMTEwNDF8MA&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'ancient scriptures' },
-    { id: '2', title: 'Temple Architecture', imageUrl: 'https://images.unsplash.com/photo-1566915682737-3e97a7eed93b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxpbmRpYW4lMjB0ZW1wbGV8ZW58MHx8fHwxNzYxMTU2MDM3fDA&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'indian temple' },
-    { id: '3', title: 'Ganges Ceremony', imageUrl: 'https://images.unsplash.com/photo-1605818725676-23c12926e41f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxnYW5nZXMlMjBjZXJlbW9ueXxlbnwwfHx8fDE3NjEyMTM5MTl8MA&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'ganges ceremony' },
-    { id: '4', title: 'The Power of Prayer', imageUrl: 'https://images.unsplash.com/photo-1554566205-d2a9e64cc5e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwcmF5aW5nJTIwaGFuZHN8ZW58MHx8fHwxNzYxMDkxMzEzfDA&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'praying hands' },
-    { id: '5', title: 'Indian Instruments', imageUrl: 'https://images.unsplash.com/photo-1676804899250-18a342d77e16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxpbmRpYW4lMjBpbnN0cnVtZW50c3xlbnwwfHx8fDE3NjEyMTM5MjB8MA&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'indian instruments' }
+    { id: '1', title: 'Ancient Scriptures', description: 'Unveiling the wisdom of the Vedas and Upanishads.', imageUrl: 'https://images.unsplash.com/photo-1759333344417-4116f7c5cf28?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxhbmNpZW50JTIwc2NyaXB0dXJlc3xlbnwwfHx8fDE3NjEyMTEwNDF8MA&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'ancient scriptures', genre: 'Scriptures', teacher: 'Scholars' },
+    { id: '2', title: 'Temple Architecture', description: 'Explore the sacred geometry of Indian temples.', imageUrl: 'https://images.unsplash.com/photo-1566915682737-3e97a7eed93b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxpbmRpYW4lMjB0ZW1wbGV8ZW58MHx8fHwxNzYxMTU2MDM3fDA&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'indian temple', genre: 'Documentary', teacher: 'Experts' },
+    { id: '3', title: 'Ganges Ceremony', description: 'Witness the spectacular Ganga Aarti from Varanasi.', imageUrl: 'https://images.unsplash.com/photo-1605818725676-23c12926e41f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxnYW5nZXMlMjBjZXJlbW9ueXxlbnwwfHx8fDE3NjEyMTM5MTl8MA&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'ganges ceremony', genre: 'Cultural', teacher: 'N/A' },
+    { id: '4', title: 'The Power of Prayer', description: 'Understanding the science and art of prayer.', imageUrl: 'https://images.unsplash.com/photo-1554566205-d2a9e64cc5e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwcmF5aW5nJTIwaGFuZHN8ZW58MHx8fHwxNzYxMDkxMzEzfDA&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'praying hands', genre: 'Discourse', teacher: 'Spiritual Masters' },
+    { id: '5', title: 'Indian Instruments', description: 'A journey through the sounds of traditional Indian music.', imageUrl: 'https://images.unsplash.com/photo-1676804899250-18a342d77e16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxpbmRpYW4lMjBpbnN0cnVtZW50c3xlbnwwfHx8fDE3NjEyMTM5MjB8MA&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'indian instruments', genre: 'Music', teacher: 'Musicians' }
 ];
 
 export default function Home() {
@@ -58,7 +59,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-slate-900 text-white">
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-yellow-100 text-black">
         <div className="container px-4 md:px-6">
           <div className="mb-12">
             <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-5xl mb-4">Our Programs</h2>
@@ -66,14 +67,37 @@ export default function Home() {
               <CarouselContent>
                 {ourPrograms.map((program) => (
                   <CarouselItem key={program.id} className="md:basis-1/2 lg:basis-1/4">
-                    <div className="p-2">
-                        <Card className="bg-white border-gray-200 overflow-hidden text-black">
+                    <div className="p-1 h-full">
+                       <Card className="overflow-hidden transition-all hover:shadow-lg hover:-translate-y-1 h-full flex flex-col bg-white">
+                          <Link href={`/videos`} className="block group">
                             <div className="relative aspect-video">
-                                <Image src={program.imageUrl} alt={program.title} fill className="object-cover" data-ai-hint={program.imageHint} />
+                              <Image
+                                src={program.imageUrl}
+                                alt={program.title}
+                                fill
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                className="object-cover"
+                                data-ai-hint={program.imageHint}
+                              />
+                              <div className="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <PlayCircle className="h-12 w-12 text-white" />
+                              </div>
                             </div>
-                            <CardContent className="p-4">
-                                <h3 className="font-headline text-lg">{program.title}</h3>
-                            </CardContent>
+                          </Link>
+                          <CardHeader>
+                            <CardTitle className="text-lg font-headline leading-tight">
+                              <Link href={`/videos`}>{program.title}</Link>
+                            </CardTitle>
+                          </CardHeader>
+                          <CardContent className="flex-grow">
+                            <p className="text-sm text-muted-foreground line-clamp-2">
+                              {program.description}
+                            </p>
+                          </CardContent>
+                          <CardFooter className="flex gap-2 flex-wrap pt-4">
+                            <Badge variant="secondary">{program.genre}</Badge>
+                            <Badge variant="outline">{program.teacher}</Badge>
+                          </CardFooter>
                         </Card>
                     </div>
                   </CarouselItem>
@@ -89,14 +113,37 @@ export default function Home() {
               <CarouselContent>
                 {comingSoon.map((program) => (
                   <CarouselItem key={program.id} className="md:basis-1/2 lg:basis-1/4">
-                     <div className="p-2">
-                        <Card className="bg-white border-gray-200 overflow-hidden text-black">
+                     <div className="p-1 h-full">
+                        <Card className="overflow-hidden transition-all hover:shadow-lg hover:-translate-y-1 h-full flex flex-col bg-white">
+                          <Link href={`/videos`} className="block group">
                             <div className="relative aspect-video">
-                                <Image src={program.imageUrl} alt={program.title} fill className="object-cover" data-ai-hint={program.imageHint} />
+                              <Image
+                                src={program.imageUrl}
+                                alt={program.title}
+                                fill
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                className="object-cover"
+                                data-ai-hint={program.imageHint}
+                              />
+                              <div className="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <PlayCircle className="h-12 w-12 text-white" />
+                              </div>
                             </div>
-                            <CardContent className="p-4">
-                                <h3 className="font-headline text-lg">{program.title}</h3>
-                            </CardContent>
+                          </Link>
+                          <CardHeader>
+                            <CardTitle className="text-lg font-headline leading-tight">
+                              <Link href={`/videos`}>{program.title}</Link>
+                            </CardTitle>
+                          </CardHeader>
+                          <CardContent className="flex-grow">
+                            <p className="text-sm text-muted-foreground line-clamp-2">
+                              {program.description}
+                            </p>
+                          </CardContent>
+                          <CardFooter className="flex gap-2 flex-wrap pt-4">
+                            <Badge variant="secondary">{program.genre}</Badge>
+                            <Badge variant="outline">{program.teacher}</Badge>
+                          </CardFooter>
                         </Card>
                     </div>
                   </CarouselItem>
