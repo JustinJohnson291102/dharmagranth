@@ -1,4 +1,4 @@
-import Logo from '@/components/Logo';
+import Image from 'next/image';
 import { Heart, Globe, BookOpen } from 'lucide-react';
 
 export default function AboutPage() {
@@ -16,7 +16,13 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="flex items-center justify-center">
-            <Logo className="w-full max-w-sm h-auto" />
+            <Image
+              src="https://ik.imagekit.io/ggelm1lwa/DharmaGranth-Logo_1-removebg-preview.png?updatedAt=1761733737365"
+              alt="Dharmagranth TV Logo"
+              width={500}
+              height={500}
+              className="w-full h-auto"
+            />
           </div>
         </div>
         
