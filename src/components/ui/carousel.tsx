@@ -285,7 +285,7 @@ const CarouselDots = () => {
     const { scrollSnaps, selectedIndex, scrollTo } = useCarousel();
   
     return (
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center justify-center gap-2">
+      <div className="flex items-center justify-center gap-2 pt-4">
         {scrollSnaps.map((_, index) => (
           <button
             key={index}
