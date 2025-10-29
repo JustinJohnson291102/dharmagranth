@@ -21,7 +21,7 @@ export default function AboutPage() {
               alt="Dharmagranth TV Logo"
               width={500}
               height={500}
-              className="w-full h-auto"
+              className="w-3/4 h-auto"
             />
           </div>
         </div>
