@@ -21,9 +21,9 @@ const getPlaceholderImage = (id: string) => {
 }
 
 const ourPrograms = [
-    { id: '1', title: 'Hinduism Teachings', description: 'Explore the vast wisdom of Sanatana Dharma.', imageUrl: 'https://images.unsplash.com/photo-1622379329864-4a24a3501255?q=80&w=2070&auto=format&fit=crop', imageHint: 'hindu temple', genre: 'Hinduism', teacher: 'Scholars' },
-    { id: '2', title: 'Buddhist Philosophy', description: 'Find peace through the teachings of the Buddha.', imageUrl: 'https://images.unsplash.com/photo-1597053350931-1e13c84a2992?q=80&w=1974&auto=format&fit=crop', imageHint: 'buddha statue', genre: 'Buddhism', teacher: 'Masters' },
-    { id: '3', title: 'Jainism Principles', description: 'Learn about Ahimsa and non-violence.', imageUrl: 'https://images.unsplash.com/photo-1621677352011-87a3233c16c6?q=80&w=2070&auto=format&fit=crop', imageHint: 'jain temple', genre: 'Jainism', teacher: 'Gurus' },
+    { id: '1', title: 'Hinduism Teachings', description: 'Explore the vast wisdom of Sanatana Dharma.', imageUrl: 'https://images.unsplash.com/photo-1588243183599-6d44547b7a68?q=80&w=2070&auto=format&fit=crop', imageHint: 'hinduism temple', genre: 'Hinduism', teacher: 'Scholars' },
+    { id: '2', title: 'Buddhist Philosophy', description: 'Find peace through the teachings of the Buddha.', imageUrl: 'https://images.unsplash.com/photo-1542468523-d69b329358b5?q=80&w=2070&auto=format&fit=crop', imageHint: 'buddhist statue', genre: 'Buddhism', teacher: 'Masters' },
+    { id: '3', title: 'Jainism Principles', description: 'Learn about Ahimsa and non-violence.', imageUrl: 'https://images.unsplash.com/photo-1698214064569-873550a8a728?q=80&w=2070&auto=format&fit=crop', imageHint: 'jainism symbol', genre: 'Jainism', teacher: 'Gurus' },
     { id: '4', title: 'Sikhism Values', description: 'Discover the principles of selfless service and equality.', imageUrl: 'https://images.unsplash.com/photo-1598888094211-3796599b71e1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnb2xkZW4lMjB0ZW1wbGV8ZW58MHx8fHwxNzYzOTExNzMwfDA&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'golden temple', genre: 'Sikhism', teacher: 'Community' },
     { id: '5', title: 'Interfaith Dialogue', description: 'Exploring the common ground between spiritual paths.', imageUrl: 'https://images.unsplash.com/photo-1532012197267-da84d127e765?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxib29rcyUyMHJlbGlnaW9ufGVufDB8fHx8MTc2MzkxMTg2N3ww&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'religious books', genre: 'Interfaith', teacher: 'Various' }
 ];
