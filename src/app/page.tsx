@@ -11,7 +11,6 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-  CarouselDots,
 } from "@/components/ui/carousel"
 import VideoCard from '@/components/videos/VideoCard';
 import { Badge } from '@/components/ui/badge';
@@ -54,87 +53,77 @@ export default function Home() {
             data-ai-hint={heroImage.imageHint}
           />
         )}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
         <div className="relative h-full flex flex-col items-center justify-end text-center p-4 md:p-8">
-          <div className="container max-w-4xl pb-16">
-            
+          <div className="container max-w-4xl pb-16 animate-fade-in-up">
+            <h1 className="text-4xl md:text-6xl font-headline font-bold text-white shadow-xl">
+              Spiritual Wisdom for the Modern World
+            </h1>
+            <p className="mt-4 text-lg md:text-xl text-primary-foreground max-w-2xl mx-auto">
+              Promoting dharmic values and teachings through spiritual media for a peaceful and enlightened life.
+            </p>
+            <div className="mt-8 flex justify-center gap-4">
+              <Button asChild size="lg">
+                <Link href="/live">
+                  <PlayCircle className="mr-2" /> Watch Live
+                </Link>
+              </Button>
+              <Button asChild size="lg" variant="secondary">
+                <Link href="/videos">Explore Videos</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
-
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-yellow-100 text-black">
+      
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
         <div className="container px-4 md:px-6">
-          <div className="mb-12">
+          <div className="mb-12 text-center animate-fade-in-up">
             <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-5xl mb-4">Our Programs</h2>
-            <Carousel opts={{ align: "start", loop: true }} className="w-full">
-              <CarouselContent>
-                {ourPrograms.map((program) => (
-                  <CarouselItem key={program.id} className="md:basis-1/2 lg:basis-1/3">
-                    <div className="p-1 h-full">
-                       <VideoCard video={{
-                          id: program.id,
-                          title: program.title,
-                          description: program.description,
-                          thumbnailUrl: program.imageUrl,
-                          thumbnailHint: program.imageHint,
-                          genre: program.genre,
-                          teacher: program.teacher,
-                       }} />
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="hidden sm:flex" />
-              <CarouselNext className="hidden sm:flex" />
-              <CarouselDots />
-            </Carousel>
+             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed mx-auto">
+              A diverse range of programs dedicated to spiritual learning and cultural enrichment.
+            </p>
           </div>
-          <div className='mt-24'>
-            <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-5xl mb-4">Coming Soon</h2>
-            <Carousel opts={{ align: "start", loop: true }} className="w-full">
-              <CarouselContent>
-                {comingSoon.map((program) => (
-                  <CarouselItem key={program.id} className="md:basis-1/2 lg:basis-1/3">
-                     <div className="p-1 h-full">
-                        <VideoCard video={{
-                            id: program.id,
-                            title: program.title,
-                            description: program.description,
-                            thumbnailUrl: program.imageUrl,
-                            thumbnailHint: program.imageHint,
-                            genre: program.genre,
-                            teacher: program.teacher,
-                        }} />
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="hidden sm:flex" />
-              <CarouselNext className="hidden sm:flex" />
-              <CarouselDots />
-            </Carousel>
-          </div>
+          <Carousel opts={{ align: "start" }} className="w-full animate-fade-in-up">
+            <CarouselContent>
+              {ourPrograms.map((program) => (
+                <CarouselItem key={program.id} className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1 h-full">
+                      <VideoCard video={{
+                        id: program.id,
+                        title: program.title,
+                        description: program.description,
+                        thumbnailUrl: program.imageUrl,
+                        thumbnailHint: program.imageHint,
+                        genre: program.genre,
+                        teacher: program.teacher,
+                      }} />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden sm:flex" />
+            <CarouselNext className="hidden sm:flex" />
+          </Carousel>
         </div>
       </section>
 
       <section className="w-full py-12 md:py-24 lg:py-32 bg-card">
         <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12 animate-fade-in-up">
             <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-5xl">Featured Videos</h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               Explore a selection of our most popular discourses, guided meditations, and cultural programs.
             </p>
           </div>
           <Carousel
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            className="w-full"
+            opts={{ align: "start" }}
+            className="w-full animate-fade-in-up"
           >
             <CarouselContent>
-              {videos.slice(0, 8).map((video) => (
+              {videos.slice(0, 9).map((video) => (
                 <CarouselItem key={video.id} className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-1">
+                  <div className="p-1 h-full">
                     <VideoCard video={video} />
                   </div>
                 </CarouselItem>
@@ -143,8 +132,8 @@ export default function Home() {
             <CarouselPrevious className="hidden sm:flex" />
             <CarouselNext className="hidden sm:flex" />
           </Carousel>
-          <div className="text-center mt-12">
-            <Button asChild variant="link" className="text-primary">
+          <div className="text-center mt-12 animate-fade-in-up">
+            <Button asChild>
               <Link href="/videos">
                 View All Videos <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
@@ -153,41 +142,41 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full py-12 md:py-20 border-y bg-background">
-        <div className="container space-y-8">
+      <section className="w-full py-12 md:py-20 border-y bg-secondary">
+        <div className="container space-y-8 animate-fade-in-up">
             <div className="text-center">
               <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-4xl">
-                Dharmagranth TV Available On OTT Platform
+                Dharmagranth TV Available On
               </h2>
             </div>
             <LogoCarousel />
         </div>
       </section>
-
+      
       <section className="w-full py-12 md:py-24 lg:py-32">
-        <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
-          <div className="space-y-4">
-            <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Upcoming Programs</div>
+        <div className="container grid items-center gap-12 px-4 md:px-6 lg:grid-cols-2">
+          <div className="space-y-4 animate-fade-in-up">
+            <Badge variant="outline">Upcoming Programs</Badge>
             <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-4xl md:text-5xl">
               Tune In to Our Daily Schedule
             </h2>
             <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               From morning chants to evening discourses, our programming is designed to guide and inspire you throughout your day.
             </p>
-            <Button asChild>
+            <Button asChild size="lg">
               <Link href="/schedule">
                 View Full Guide
                 <Calendar className="ml-2 h-4 w-4" />
               </Link>
             </Button>
           </div>
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 animate-fade-in-up" style={{"--delay": "0.2s"}}>
             {upcomingPrograms.map(program => (
-              <Card key={program.id}>
-                <CardContent className="p-6 flex items-start gap-4">
-                  <div className="bg-primary/10 text-primary p-3 rounded-lg flex flex-col items-center">
+              <Card key={program.id} className="transition-all hover:shadow-md">
+                <CardContent className="p-4 flex items-center gap-4">
+                  <div className="bg-primary/10 text-primary p-3 rounded-lg flex flex-col items-center justify-center aspect-square w-20">
                     <span className="text-sm font-semibold">{program.time.split(' ')[1]}</span>
-                    <span className="text-2xl font-bold">{program.time.split(' ')[0]}</span>
+                    <span className="text-2xl font-bold tracking-tighter">{program.time.split(' ')[0]}</span>
                   </div>
                   <div>
                     <h3 className="text-lg font-headline font-semibold">{program.title}</h3>
@@ -199,8 +188,38 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
+        <div className="container px-4 md:px-6">
+          <div className="mb-12 text-center animate-fade-in-up">
+            <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-5xl mb-4">Coming Soon</h2>
+             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed mx-auto">
+              Exciting new programs and series are on the way. Here's a sneak peek.
+            </p>
+          </div>
+          <Carousel opts={{ align: "start" }} className="w-full animate-fade-in-up">
+            <CarouselContent>
+              {comingSoon.map((program) => (
+                <CarouselItem key={program.id} className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1 h-full">
+                      <VideoCard video={{
+                        id: program.id,
+                        title: program.title,
+                        description: program.description,
+                        thumbnailUrl: program.imageUrl,
+                        thumbnailHint: program.imageHint,
+                        genre: program.genre,
+                        teacher: program.teacher,
+                      }} />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden sm:flex" />
+            <CarouselNext className="hidden sm:flex" />
+          </Carousel>
+        </div>
+      </section>
     </div>
   );
 }
-
-    

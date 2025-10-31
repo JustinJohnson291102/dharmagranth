@@ -4,9 +4,10 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useToast } from "@/hooks/use-toast";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 const faqs = [
   {
@@ -41,40 +42,84 @@ export default function ContactPage() {
 
   return (
     <div className="container py-12 md:py-20">
-      <div className="grid md:grid-cols-2 gap-12">
-        <div>
-          <h1 className="text-4xl font-headline font-bold mb-4">Get in Touch</h1>
-          <p className="text-lg text-muted-foreground mb-8">
-            We would love to hear from you. Whether you have a question, feedback, or a partnership proposal, please don't hesitate to reach out.
-          </p>
-          <Card>
+      <div className="text-center mb-16 animate-fade-in-up">
+        <h1 className="text-4xl md:text-5xl font-headline font-bold mb-4">Contact Us</h1>
+        <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+          We’d love to hear from you. Whether it’s a question, feedback, or a prayer request, our team is here for you.
+        </p>
+      </div>
+
+      <div className="grid md:grid-cols-5 gap-12">
+        <div className="md:col-span-2 space-y-8 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+            <div>
+              <h2 className="text-2xl font-headline font-bold mb-4">Contact Information</h2>
+              <p className="text-muted-foreground mb-6">
+                Reach out to us through any of the following channels.
+              </p>
+              <div className="space-y-4">
+                <div className="flex items-start gap-4">
+                  <div className="bg-primary/10 text-primary p-3 rounded-full"><Mail className="h-5 w-5" /></div>
+                  <div>
+                    <h3 className="font-semibold">Email Us</h3>
+                    <p className="text-muted-foreground text-sm">contact@dharmagranth.tv</p>
+                  </div>
+                </div>
+                 <div className="flex items-start gap-4">
+                  <div className="bg-primary/10 text-primary p-3 rounded-full"><Phone className="h-5 w-5" /></div>
+                  <div>
+                    <h3 className="font-semibold">Call Us</h3>
+                    <p className="text-muted-foreground text-sm">+1 (555) 123-4567</p>
+                  </div>
+                </div>
+                 <div className="flex items-start gap-4">
+                  <div className="bg-primary/10 text-primary p-3 rounded-full"><MapPin className="h-5 w-5" /></div>
+                  <div>
+                    <h3 className="font-semibold">Our Address</h3>
+                    <p className="text-muted-foreground text-sm">123 Dharma Lane, Spirituality City, 10001</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+                <h2 className="text-2xl font-headline font-bold mb-4">FAQs</h2>
+                <p className="text-muted-foreground mb-6">
+                    Find answers to common questions.
+                </p>
+                <Accordion type="single" collapsible className="w-full">
+                    {faqs.map((faq, index) => (
+                    <AccordionItem key={index} value={`item-${index}`}>
+                        <AccordionTrigger className="text-left">{faq.question}</AccordionTrigger>
+                        <AccordionContent>
+                        {faq.answer}
+                        </AccordionContent>
+                    </AccordionItem>
+                    ))}
+                </Accordion>
+            </div>
+        </div>
+
+        <div className="md:col-span-3 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
+          <Card className="shadow-lg">
             <CardHeader>
-              <CardTitle className="font-headline">Send us a Message</CardTitle>
+              <CardTitle className="font-headline text-2xl">Send us a Message</CardTitle>
+              <CardDescription>
+                Have a specific question? Fill out the form and we'll get back to you.
+              </CardDescription>
             </CardHeader>
             <CardContent>
-              <form className="space-y-4" onSubmit={handleSubmit}>
-                <Input placeholder="Your Name" required />
-                <Input type="email" placeholder="Your Email" required />
+              <form className="space-y-6" onSubmit={handleSubmit}>
+                <div className="grid sm:grid-cols-2 gap-4">
+                    <Input placeholder="Your Name" required />
+                    <Input type="email" placeholder="Your Email" required />
+                </div>
                 <Input placeholder="Subject" required />
-                <Textarea placeholder="Your Message" required rows={5} />
-                <Button type="submit" className="w-full">Send Message</Button>
+                <Textarea placeholder="Your Message" required rows={8} />
+                <Button type="submit" size="lg" className="w-full">Send Message</Button>
               </form>
             </CardContent>
           </Card>
         </div>
-        <div>
-          <h2 className="text-3xl font-headline font-bold mb-8">Frequently Asked Questions</h2>
-          <Accordion type="single" collapsible className="w-full">
-            {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger className="text-left">{faq.question}</AccordionTrigger>
-                <AccordionContent>
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
+
       </div>
     </div>
   );
