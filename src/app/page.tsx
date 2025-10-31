@@ -21,19 +21,19 @@ const getPlaceholderImage = (id: string) => {
 }
 
 const ourPrograms = [
-    { id: '1', title: 'Hinduism Teachings', description: 'Explore the vast wisdom of Sanatana Dharma.', imageUrl: 'https://images.unsplash.com/photo-1598539967793-1ee7a303b608?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxoYW51bWFufGVufDB8fHx8MTc2Mjg1NzcyNXww&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'hindu deity', genre: 'Hinduism', teacher: 'Scholars' },
-    { id: '2', title: 'Buddhist Philosophy', description: 'Find peace through the teachings of the Buddha.', imageUrl: 'https://images.unsplash.com/photo-1596700543834-0c5a2a5b6c50?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxidWRkaGF8ZW58MHx8fHwxNzYyODU3ODEyfDA&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'buddha statue', genre: 'Buddhism', teacher: 'Masters' },
-    { id: '3', title: 'Jainism Principles', description: 'Learn about Ahimsa and non-violence.', imageUrl: 'https://images.unsplash.com/photo-1629875213644-e55d7578e4c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzcGlyaXR1YWwlMjB0ZWFjaGVyfGVufDB8fHx8MTc2MTIxMTA0MXww&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'spiritual teacher', genre: 'Jainism', teacher: 'Gurus' },
-    { id: '4', title: 'Sikhism Values', description: 'Discover the principles of selfless service and equality.', imageUrl: 'https://images.unsplash.com/photo-1582852239686-271618335559?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjBtdXNpY2lhbnN8ZW58MHx8fHwxNzYxMjg4ODgyfDA&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'sikh musicians', genre: 'Sikhism', teacher: 'Community' },
-    { id: '5', title: 'Interfaith Dialogue', description: 'Exploring the common ground between spiritual paths.', imageUrl: 'https://images.unsplash.com/photo-1709580061994-f76359f5c6e6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtZWRpdGF0aW9uJTIwbGFrZXxlbnwwfHx8fDE3NjEyMTM5MTl8MA&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'peaceful meditation', genre: 'Interfaith', teacher: 'Various' }
+    { id: '1', title: 'Hinduism Teachings', description: 'Explore the vast wisdom of Sanatana Dharma.', imageUrl: 'https://images.unsplash.com/photo-1621462689115-a316dec7b1db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxsb3JkJTIwc2hpdmF8ZW58MHx8fHwxNzYzOTExNjE2fDA&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'lord shiva', genre: 'Hinduism', teacher: 'Scholars' },
+    { id: '2', title: 'Buddhist Philosophy', description: 'Find peace through the teachings of the Buddha.', imageUrl: 'https://images.unsplash.com/photo-1542360299-4c40b8e83533?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxidWRkaGlzdCUyMG1vbmt8ZW58MHx8fHwxNzYzOTExNjU1fDA&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'buddhist monk', genre: 'Buddhism', teacher: 'Masters' },
+    { id: '3', title: 'Jainism Principles', description: 'Learn about Ahimsa and non-violence.', imageUrl: 'https://images.unsplash.com/photo-1585261869429-23253a487588?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxqYWluJTIwdGVtcGxlfGVufDB8fHx8MTc2MzkxMTcwNHww&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'jain temple', genre: 'Jainism', teacher: 'Gurus' },
+    { id: '4', title: 'Sikhism Values', description: 'Discover the principles of selfless service and equality.', imageUrl: 'https://images.unsplash.com/photo-1598888094211-3796599b71e1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnb2xkZW4lMjB0ZW1wbGV8ZW58MHx8fHwxNzYzOTExNzMwfDA&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'golden temple', genre: 'Sikhism', teacher: 'Community' },
+    { id: '5', title: 'Interfaith Dialogue', description: 'Exploring the common ground between spiritual paths.', imageUrl: 'https://images.unsplash.com/photo-1532012197267-da84d127e765?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxib29rcyUyMHJlbGlnaW9ufGVufDB8fHx8MTc2MzkxMTg2N3ww&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'religious books', genre: 'Interfaith', teacher: 'Various' }
 ];
 
 const comingSoon = [
-    { id: '1', title: 'Ancient Scriptures', description: 'Unveiling the wisdom of the Vedas and Upanishads.', imageUrl: 'https://images.unsplash.com/photo-1759333344417-4116f7c5cf28?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxhbmNpZW50JTIwc2NyaXB0dXJlc3xlbnwwfHx8fDE3NjEyMTEwNDF8MA&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'ancient scriptures', genre: 'Scriptures', teacher: 'Scholars' },
-    { id: '2', title: 'Temple Architecture', description: 'Explore the sacred geometry of Indian temples.', imageUrl: 'https://images.unsplash.com/photo-1566915682737-3e97a7eed93b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxpbmRpYW4lMjB0ZW1wbGV8ZW58MHx8fHwxNzYxMTU2MDM3fDA&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'indian temple', genre: 'Documentary', teacher: 'Experts' },
-    { id: '3', title: 'Ganges Ceremony', description: 'Witness the spectacular Ganga Aarti from Varanasi.', imageUrl: 'https://images.unsplash.com/photo-1605818725676-23c12926e41f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxnYW5nZXMlMjBjZXJlbW9ueXxlbnwwfHx8fDE3NjEyMTM5MTl8MA&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'ganges ceremony', genre: 'Cultural', teacher: 'N/A' },
-    { id: '4', title: 'The Power of Prayer', description: 'Understanding the science and art of prayer.', imageUrl: 'https://images.unsplash.com/photo-1554566205-d2a9e64cc5e9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwcmF5aW5nJTIwaGFuZHN8ZW58MHx8fHwxNzYxMDkxMzEzfDA&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'praying hands', genre: 'Discourse', teacher: 'Spiritual Masters' },
-    { id: '5', title: 'Indian Instruments', description: 'A journey through the sounds of traditional Indian music.', imageUrl: 'https://images.unsplash.com/photo-1676804899250-18a342d77e16?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxpbmRpYW4lMjBpbnN0cnVtZW50c3xlbnwwfHx8fDE3NjEyMTM5MjB8MA&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'indian instruments', genre: 'Music', teacher: 'Musicians' }
+    { id: '1', title: 'Ancient Scriptures', description: 'Unveiling the wisdom of the Vedas and Upanishads.', imageUrl: 'https://images.unsplash.com/photo-1605057132044-feb895054cbe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhbmNpZW50JTIwaW5kaWFuJTIwbWFudXNjcmlwdHxlbnwwfHx8fDE3NjM5MTIwMjF8MA&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'ancient manuscript', genre: 'Scriptures', teacher: 'Scholars' },
+    { id: '2', title: 'Temple Architecture', description: 'Explore the sacred geometry of Indian temples.', imageUrl: 'https://images.unsplash.com/photo-1528181304800-259b08848526?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjB0ZW1wbGUlMjBhcmNoaXRlY3R1cmV8ZW58MHx8fHwxNzYzOTExOTc2fDA&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'temple architecture', genre: 'Documentary', teacher: 'Experts' },
+    { id: '3', title: 'Ganges Ceremony', description: 'Witness the spectacular Ganga Aarti from Varanasi.', imageUrl: 'https://images.unsplash.com/photo-1582883693743-401494555810?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnYW5nYSUyMGFhcnRpfGVufDB8fHx8MTc2MzkxMTkyMHww&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'ganga aarti', genre: 'Cultural', teacher: 'N/A' },
+    { id: '4', title: 'The Power of Prayer', description: 'Understanding the science and art of prayer.', imageUrl: 'https://images.unsplash.com/photo-1474649147779-154a88301918?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwZW9wbGUlMjBwcmF5aW5nJTIwaW5kaWF8ZW58MHx8fHwxNzYzOTExOTQxfDA&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'people praying', genre: 'Discourse', teacher: 'Spiritual Masters' },
+    { id: '5', title: 'Indian Instruments', description: 'A journey through the sounds of traditional Indian music.', imageUrl: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzb21lJTIwbXVzaWMlMjBpbnN0cnVtZW50c3xlbnwwfHx8fDE3NjM5MTIwODh8MA&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'music instruments', genre: 'Music', teacher: 'Musicians' }
 ];
 
 export default function Home() {
@@ -85,10 +85,10 @@ export default function Home() {
               A diverse range of programs dedicated to spiritual learning and cultural enrichment.
             </p>
           </div>
-          <Carousel opts={{ align: "start" }} className="w-full animate-fade-in-up">
-            <CarouselContent>
+          <Carousel opts={{ align: "start", loop: true }} className="w-full animate-fade-in-up">
+            <CarouselContent className="-ml-1">
               {ourPrograms.map((program) => (
-                <CarouselItem key={program.id} className="md:basis-1/2 lg:basis-1/3">
+                <CarouselItem key={program.id} className="pl-1 md:basis-1/2 lg:basis-1/3">
                   <div className="p-1 h-full">
                       <VideoCard video={{
                         id: program.id,
@@ -198,10 +198,10 @@ export default function Home() {
               Exciting new programs and series are on the way. Here's a sneak peek.
             </p>
           </div>
-          <Carousel opts={{ align: "start" }} className="w-full animate-fade-in-up">
-            <CarouselContent>
+          <Carousel opts={{ align: "start", loop: true }} className="w-full animate-fade-in-up">
+            <CarouselContent className="-ml-1">
               {comingSoon.map((program) => (
-                <CarouselItem key={program.id} className="md:basis-1/2 lg:basis-1/3">
+                <CarouselItem key={program.id} className="pl-1 md:basis-1/2 lg:basis-1/3">
                   <div className="p-1 h-full">
                       <VideoCard video={{
                         id: program.id,
@@ -224,3 +224,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
