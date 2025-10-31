@@ -49,7 +49,7 @@ export default function Home() {
             src={heroImage.imageUrl}
             alt={heroImage.description}
             fill
-            className="object-fill"
+            className="object-cover"
             priority
             data-ai-hint={heroImage.imageHint}
           />
@@ -157,7 +157,7 @@ export default function Home() {
         <div className="container space-y-8">
             <div className="text-center">
               <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-4xl">
-                Available On OTT Platforms
+                Dharmagranth TV Available On OTT Platform
               </h2>
             </div>
             <LogoCarousel />
