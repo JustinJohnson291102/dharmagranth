@@ -21,9 +21,9 @@ const getPlaceholderImage = (id: string) => {
 }
 
 const ourPrograms = [
-    { id: '1', title: 'Hinduism Teachings', description: 'Explore the vast wisdom of Sanatana Dharma.', imageUrl: 'https://images.unsplash.com/photo-1621462689115-a316dec7b1db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxsb3JkJTIwc2hpdmF8ZW58MHx8fHwxNzYzOTExNjE2fDA&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'lord shiva', genre: 'Hinduism', teacher: 'Scholars' },
-    { id: '2', title: 'Buddhist Philosophy', description: 'Find peace through the teachings of the Buddha.', imageUrl: 'https://images.unsplash.com/photo-1542360299-4c40b8e83533?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxidWRkaGlzdCUyMG1vbmt8ZW58MHx8fHwxNzYzOTExNjU1fDA&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'buddhist monk', genre: 'Buddhism', teacher: 'Masters' },
-    { id: '3', title: 'Jainism Principles', description: 'Learn about Ahimsa and non-violence.', imageUrl: 'https://images.unsplash.com/photo-1585261869429-23253a487588?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxqYWluJTIwdGVtcGxlfGVufDB8fHx8MTc2MzkxMTcwNHww&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'jain temple', genre: 'Jainism', teacher: 'Gurus' },
+    { id: '1', title: 'Hinduism Teachings', description: 'Explore the vast wisdom of Sanatana Dharma.', imageUrl: 'https://images.unsplash.com/photo-1604185888204-94b1b3a533de?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxoMTduZHUxczVtJTIwdGVhY2hpbmdzfGVufDB8fHx8MTc2MzkxOTczOXww&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'hinduism', genre: 'Hinduism', teacher: 'Scholars' },
+    { id: '2', title: 'Buddhist Philosophy', description: 'Find peace through the teachings of the Buddha.', imageUrl: 'https://images.unsplash.com/photo-1542360299-4c40b8e83533?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxidWRkaGlzdCUyMG1vbmt8ZW58MHx8fHwxNzYzOTExNjU1fDA&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'buddhism', genre: 'Buddhism', teacher: 'Masters' },
+    { id: '3', title: 'Jainism Principles', description: 'Learn about Ahimsa and non-violence.', imageUrl: 'https://images.unsplash.com/photo-1585261869429-23253a487588?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxqYWluJTIwdGVtcGxlfGVufDB8fHx8MTc2MzkxMTcwNHww&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'jainism', genre: 'Jainism', teacher: 'Gurus' },
     { id: '4', title: 'Sikhism Values', description: 'Discover the principles of selfless service and equality.', imageUrl: 'https://images.unsplash.com/photo-1598888094211-3796599b71e1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxnb2xkZW4lMjB0ZW1wbGV8ZW58MHx8fHwxNzYzOTExNzMwfDA&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'golden temple', genre: 'Sikhism', teacher: 'Community' },
     { id: '5', title: 'Interfaith Dialogue', description: 'Exploring the common ground between spiritual paths.', imageUrl: 'https://images.unsplash.com/photo-1532012197267-da84d127e765?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxib29rcyUyMHJlbGlnaW9ufGVufDB8fHx8MTc2MzkxMTg2N3ww&ixlib=rb-4.1.0&q=80&w=1080', imageHint: 'religious books', genre: 'Interfaith', teacher: 'Various' }
 ];
@@ -224,5 +224,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
