@@ -54,12 +54,14 @@ export default function Home() {
           />
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-        <div className="relative h-full flex flex-col items-center justify-end text-center p-4 md:p-8">
-          <div className="container max-w-4xl pb-16 animate-fade-in-up">
-            <h1 className="text-4xl md:text-6xl font-headline font-bold text-white shadow-xl">
+      </section>
+
+      <section className="w-full py-12 md:py-20 lg:py-24 bg-background">
+        <div className="container text-center animate-fade-in-up">
+            <h1 className="text-4xl md:text-6xl font-headline font-bold text-foreground">
               Spiritual Wisdom for the Modern World
             </h1>
-            <p className="mt-4 text-lg md:text-xl text-primary-foreground max-w-2xl mx-auto">
+            <p className="mt-4 text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
               Promoting dharmic values and teachings through spiritual media for a peaceful and enlightened life.
             </p>
             <div className="mt-8 flex justify-center gap-4">
@@ -72,7 +74,6 @@ export default function Home() {
                 <Link href="/videos">Explore Videos</Link>
               </Button>
             </div>
-          </div>
         </div>
       </section>
       
