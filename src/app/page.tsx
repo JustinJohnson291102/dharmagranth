@@ -21,19 +21,19 @@ const getPlaceholderImage = (id: string) => {
 }
 
 const ourPrograms = [
-    { id: '1', title: 'Hinduism Teachings', description: 'Explore the vast wisdom of Sanatana Dharma.', imageUrl: 'https://picsum.photos/seed/program1/600/400', imageHint: 'hinduism temple', genre: 'Hinduism', teacher: 'Scholars' },
-    { id: '2', title: 'Buddhist Philosophy', description: 'Find peace through the teachings of the Buddha.', imageUrl: 'https://picsum.photos/seed/program2/600/400', imageHint: 'buddhist statue', genre: 'Buddhism', teacher: 'Masters' },
-    { id: '3', title: 'Jainism Principles', description: 'Learn about Ahimsa and non-violence.', imageUrl: 'https://picsum.photos/seed/program3/600/400', imageHint: 'jainism symbol', genre: 'Jainism', teacher: 'Gurus' },
-    { id: '4', title: 'Sikhism Values', description: 'Discover the principles of selfless service and equality.', imageUrl: 'https://picsum.photos/seed/program4/600/400', imageHint: 'golden temple', genre: 'Sikhism', teacher: 'Community' },
-    { id: '5', title: 'Interfaith Dialogue', description: 'Exploring the common ground between spiritual paths.', imageUrl: 'https://picsum.photos/seed/program5/600/400', imageHint: 'religious books', genre: 'Interfaith', teacher: 'Various' }
+    { id: '1', title: 'Hinduism Teachings', description: 'Explore the vast wisdom of Sanatana Dharma.', imageUrl: 'https://picsum.photos/seed/hindu-temple/600/400', imageHint: 'hinduism temple', genre: 'Hinduism', teacher: 'Scholars' },
+    { id: '2', title: 'Buddhist Philosophy', description: 'Find peace through the teachings of the Buddha.', imageUrl: 'https://picsum.photos/seed/buddha-statue/600/400', imageHint: 'buddhist statue', genre: 'Buddhism', teacher: 'Masters' },
+    { id: '3', title: 'Jainism Principles', description: 'Learn about Ahimsa and non-violence.', imageUrl: 'https://picsum.photos/seed/jain-symbol/600/400', imageHint: 'jainism symbol', genre: 'Jainism', teacher: 'Gurus' },
+    { id: '4', title: 'Sikhism Values', description: 'Discover the principles of selfless service and equality.', imageUrl: 'https://picsum.photos/seed/golden-temple/600/400', imageHint: 'golden temple', genre: 'Sikhism', teacher: 'Community' },
+    { id: '5', title: 'Interfaith Dialogue', description: 'Exploring the common ground between spiritual paths.', imageUrl: 'https://picsum.photos/seed/interfaith-symbols/600/400', imageHint: 'religious books', genre: 'Interfaith', teacher: 'Various' }
 ];
 
 const comingSoon = [
-    { id: '1', title: 'Ancient Scriptures', description: 'Unveiling the wisdom of the Vedas and Upanishads.', imageUrl: 'https://picsum.photos/seed/soon1/600/400', imageHint: 'ancient manuscript', genre: 'Scriptures', teacher: 'Scholars' },
-    { id: '2', title: 'Temple Architecture', description: 'Explore the sacred geometry of Indian temples.', imageUrl: 'https://picsum.photos/seed/soon2/600/400', imageHint: 'temple architecture', genre: 'Documentary', teacher: 'Experts' },
-    { id: '3', title: 'Ganges Ceremony', description: 'Witness the spectacular Ganga Aarti from Varanasi.', imageUrl: 'https://picsum.photos/seed/soon3/600/400', imageHint: 'ganga aarti', genre: 'Cultural', teacher: 'N/A' },
-    { id: '4', title: 'The Power of Prayer', description: 'Understanding the science and art of prayer.', imageUrl: 'https://picsum.photos/seed/soon4/600/400', imageHint: 'people praying', genre: 'Discourse', teacher: 'Spiritual Masters' },
-    { id: '5', title: 'Indian Instruments', description: 'A journey through the sounds of traditional Indian music.', imageUrl: 'https://picsum.photos/seed/soon5/600/400', imageHint: 'music instruments', genre: 'Music', teacher: 'Musicians' }
+    { id: '1', title: 'Ancient Scriptures', description: 'Unveiling the wisdom of the Vedas and Upanishads.', imageUrl: 'https://picsum.photos/seed/ancient-manuscript/600/400', imageHint: 'ancient manuscript', genre: 'Scriptures', teacher: 'Scholars' },
+    { id: '2', title: 'Temple Architecture', description: 'Explore the sacred geometry of Indian temples.', imageUrl: 'https://picsum.photos/seed/temple-carving/600/400', imageHint: 'temple architecture', genre: 'Documentary', teacher: 'Experts' },
+    { id: '3', title: 'Ganges Ceremony', description: 'Witness the spectacular Ganga Aarti from Varanasi.', imageUrl: 'https://picsum.photos/seed/ganges-aarti/600/400', imageHint: 'ganga aarti', genre: 'Cultural', teacher: 'N/A' },
+    { id: '4', title: 'The Power of Prayer', description: 'Understanding the science and art of prayer.', imageUrl: 'https://picsum.photos/seed/praying-hands/600/400', imageHint: 'people praying', genre: 'Discourse', teacher: 'Spiritual Masters' },
+    { id: '5', title: 'Indian Instruments', description: 'A journey through the sounds of traditional Indian music.', imageUrl: 'https://picsum.photos/seed/sitar-tabla/600/400', imageHint: 'music instruments', genre: 'Music', teacher: 'Musicians' }
 ];
 
 export default function Home() {
