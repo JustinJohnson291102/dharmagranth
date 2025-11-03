@@ -7,7 +7,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 const mockUser = {
   name: "Spiritual Seeker",
   email: "seeker@example.com",
-  avatar: "https://picsum.photos/seed/avatar/100/100",
+  avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2070&auto=format&fit=crop",
   viewingHistory: [
     "The Art of Mindful Living",
     "Meditation for Beginners",
