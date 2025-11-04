@@ -2,7 +2,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { videos, schedule } from '@/lib/data';
 import { ArrowRight, PlayCircle, Calendar } from 'lucide-react';
 import {
@@ -15,10 +14,7 @@ import {
 import VideoCard from '@/components/videos/VideoCard';
 import { Badge } from '@/components/ui/badge';
 import LogoCarousel from '@/components/layout/LogoCarousel';
-
-const getPlaceholderImage = (id: string) => {
-  return PlaceHolderImages.find(img => img.id === id);
-}
+import ImageMarquee from '@/components/layout/ImageMarquee';
 
 const ourPrograms = [
     { id: '1', title: 'Hinduism Teachings', description: 'Explore the vast wisdom of Sanatana Dharma.', imageUrl: 'https://plus.unsplash.com/premium_photo-1675601485116-b083859583b2?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1974', imageHint: 'hinduism temple', genre: 'Hinduism', teacher: 'Scholars' },
@@ -37,22 +33,19 @@ const comingSoon = [
 ];
 
 export default function Home() {
-  const heroImage = getPlaceholderImage('hero-bg');
   const upcomingPrograms = schedule.slice(0, 3);
 
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <section className="relative w-full h-[60vh] md:h-[80vh]">
-        {heroImage && (
-          <Image
-            src={heroImage.imageUrl}
-            alt={heroImage.description}
+        <Image
+            src="https://ik.imagekit.io/ggelm1lwa/dharmgranthtv.jpeg?updatedAt=1761734926711"
+            alt="A collage representing various aspects of dharmic traditions."
             fill
             className="object-fill"
             priority
-            data-ai-hint={heroImage.imageHint}
+            data-ai-hint="dharmic collage"
           />
-        )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
       </section>
 
@@ -107,6 +100,10 @@ export default function Home() {
             <CarouselNext className="hidden sm:flex" />
           </Carousel>
         </div>
+      </section>
+
+      <section className="w-full py-12 md:py-24 lg:py-32">
+        <ImageMarquee />
       </section>
 
       <section className="w-full py-12 md:py-24 lg:py-32 bg-card">

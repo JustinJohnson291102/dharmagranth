@@ -101,4 +101,11 @@
   .animate-scroll {
     animation: scroll 40s linear infinite;
   }
+  @keyframes scroll-right-to-left {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  .animate-scroll-right-to-left {
+    animation: scroll-right-to-left 60s linear infinite;
+  }
 }
