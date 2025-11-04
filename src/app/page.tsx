@@ -60,7 +60,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-[100dvh]">
-      <section className="relative w-full h-[60vh] md:h-[80vh]">
+      <section className="relative w-full h-[80vh]">
         <Image
             src="https://ik.imagekit.io/ggelm1lwa/dharmgranthtv.jpeg?updatedAt=1761734926711"
             alt="A collage representing various aspects of dharmic traditions."
@@ -185,7 +185,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full py-16 md:py-24 bg-secondary">
+      <section className="w-full py-8 md:py-12 bg-secondary">
         <div className="container grid items-center gap-12 px-4 md:px-6 lg:grid-cols-2">
             <div className="space-y-4 animate-fade-in-up">
                 <Badge variant="outline">Upcoming Programs</Badge>
@@ -222,6 +222,34 @@ export default function Home() {
                 </div>
             </div>
         </div>
+      </section>
+      
+      <section className="w-full py-12 md:py-16">
+        <Carousel
+            plugins={[Autoplay({ delay: 2000, stopOnInteraction: false })]}
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-1">
+              {scheduleCarouselImages.map((src, index) => (
+                <CarouselItem key={index} className="pl-1 basis-full">
+                  <div className="p-1">
+                    <div className="relative h-[60vh]">
+                      <Image
+                        src={src}
+                        alt={`Schedule image ${index + 1}`}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
       </section>
 
       <section className="w-full py-12 md:py-20 border-y bg-background">
