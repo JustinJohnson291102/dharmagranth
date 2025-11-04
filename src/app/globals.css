@@ -91,6 +91,13 @@
   .animate-fade-in-up {
     animation: fade-in-up 0.5s ease-out forwards;
   }
+  @keyframes splash-zoom {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+  .animate-splash-zoom {
+    animation: splash-zoom 2s ease-in-out infinite;
+  }
 }
 
 @layer utilities {
