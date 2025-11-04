@@ -1,3 +1,7 @@
+
+'use client'
+
+import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -14,7 +18,8 @@ import {
 import VideoCard from '@/components/videos/VideoCard';
 import { Badge } from '@/components/ui/badge';
 import LogoCarousel from '@/components/layout/LogoCarousel';
-import ImageMarquee from '@/components/layout/ImageMarquee';
+import Autoplay from "embla-carousel-autoplay"
+
 
 const ourPrograms = [
     { id: '1', title: 'Hinduism Teachings', description: 'Explore the vast wisdom of Sanatana Dharma.', imageUrl: 'https://plus.unsplash.com/premium_photo-1675601485116-b083859583b2?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1974', imageHint: 'hinduism temple', genre: 'Hinduism', teacher: 'Scholars' },
@@ -32,8 +37,28 @@ const comingSoon = [
     { id: '5', title: 'Indian Instruments', description: 'A journey through the sounds of traditional Indian music.', imageUrl: 'https://images.unsplash.com/photo-1676804899250-18a342d77e16?q=80&w=2070&auto=format&fit=crop', imageHint: 'music instruments', genre: 'Music', teacher: 'Musicians' }
 ];
 
+const movingCarouselImages = [
+  'https://ik.imagekit.io/ggelm1lwa/Screenshot%20(91).png?updatedAt=1762260925846',
+  'https://ik.imagekit.io/ggelm1lwa/Screenshot%20(93).png?updatedAt=1762260926141',
+  'https://ik.imagekit.io/ggelm1lwa/Screenshot%20(94).png?updatedAt=1762260925745',
+  'https://ik.imagekit.io/ggelm1lwa/Screenshot%20(105).png?updatedAt=1762260926261',
+  'https://ik.imagekit.io/ggelm1lwa/Screenshot%20(101).png?updatedAt=1762260926309',
+  'https://ik.imagekit.io/ggelm1lwa/Screenshot%20(92).png?updatedAt=1762260925786',
+  'https://ik.imagekit.io/ggelm1lwa/Screenshot%20(103).png?updatedAt=1762260926305',
+  'https://ik.imagekit.io/ggelm1lwa/Screenshot%20(98).png?updatedAt=1762260926374',
+  'https://ik.imagekit.io/ggelm1lwa/Screenshot%20(97).png?updatedAt=1762260926358',
+  'https://ik.imagekit.io/ggelm1lwa/Screenshot%20(95).png?updatedAt=1762260926399',
+  'https://ik.imagekit.io/ggelm1lwa/Screenshot%20(100).png?updatedAt=1762260926425',
+  'https://ik.imagekit.io/ggelm1lwa/Screenshot%20(99).png?updatedAt=1762260926425',
+  'https://ik.imagekit.io/ggelm1lwa/Screenshot%20(104).png?updatedAt=1762260926420',
+  'https://ik.imagekit.io/ggelm1lwa/Screenshot%20(96).png?updatedAt=1762260926267',
+  'https://ik.imagekit.io/ggelm1lwa/Screenshot%20(102).png?updatedAt=1762260925823',
+];
+
+
 export default function Home() {
   const upcomingPrograms = schedule.slice(0, 3);
+  const autoplay = React.useRef(Autoplay({ delay: 2000, stopOnInteraction: false, playOnInit: true, stopOnMouseEnter: true }));
 
   return (
     <div className="flex flex-col min-h-[100dvh]">
@@ -103,7 +128,31 @@ export default function Home() {
       </section>
 
       <section className="w-full py-12 md:py-24 lg:py-32">
-        <ImageMarquee />
+        <Carousel
+          plugins={[autoplay.current]}
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          className="w-full"
+        >
+          <CarouselContent className="-ml-1">
+            {movingCarouselImages.map((src, index) => (
+              <CarouselItem key={index} className="pl-1 basis-full md:basis-1/3 lg:basis-1/4">
+                <div className="p-1">
+                  <div className="relative aspect-video">
+                    <Image
+                      src={src}
+                      alt={`Carousel image ${index + 1}`}
+                      fill
+                      className="object-fill rounded-lg"
+                    />
+                  </div>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
       </section>
 
       <section className="w-full py-12 md:py-24 lg:py-32 bg-card">
