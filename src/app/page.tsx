@@ -25,7 +25,7 @@ const ourPrograms = [
     { id: '2', title: 'Buddhist Philosophy', description: 'Find peace through the teachings of the Buddha.', imageUrl: 'https://images.unsplash.com/photo-1549167008-dce1759943b9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1974', imageHint: 'buddhist statue', genre: 'Buddhism', teacher: 'Masters' },
     { id: '3', title: 'Jainism Principles', description: 'Learn about Ahimsa and non-violence.', imageUrl: 'https://media.istockphoto.com/id/494243298/photo/jain-temple-mahavira-in-jaisalmer-india.jpg?s=1024x1024&w=is&k=20&c=ysr4OAZ-yCc4l6cHpLMXB-0T10PKzIxYUOoM6fKxosU=', imageHint: 'jainism symbol', genre: 'Jainism', teacher: 'Gurus' },
     { id: '4', title: 'Sikhism Values', description: 'Discover the principles of selfless service and equality.', imageUrl: 'https://plus.unsplash.com/premium_photo-1697730331435-92e07494db43?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1025', imageHint: 'golden temple', genre: 'Sikhism', teacher: 'Community' },
-    { id: '5', title: 'Interfaith Dialogue', description: 'Exploring the common ground between spiritual paths.', imageUrl: 'https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=2070&auto=format&fit=crop', imageHint: 'religious books', genre: 'Interfaith', teacher: 'Various' }
+    { id: '5', title: 'Interfaith Dialogue', description: 'Exploring the common ground between spiritual paths.', imageUrl: 'https://plus.unsplash.com/premium_photo-1736961713901-63076826b437?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=871', imageHint: 'religious books', genre: 'Interfaith', teacher: 'Various' }
 ];
 
 const comingSoon = [
