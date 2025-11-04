@@ -185,7 +185,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative w-full py-20 md:py-32 lg:py-40">
+      <section className="relative w-full pt-10 md:pt-16 lg:pt-20 pb-20 md:pb-32 lg:pb-40">
         <Carousel
           plugins={[Autoplay({ delay: 4000, stopOnInteraction: false })]}
           opts={{ loop: true }}
