@@ -37,7 +37,7 @@ export default function AboutPage() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-            <div className="flex items-center justify-center order-first md:order-last">
+            <div className="flex items-center justify-center">
                 <Image
                 src="https://ik.imagekit.io/ggelm1lwa/_Pngtree_tv-shape-red-live-icon_5602091-removebg-preview.png?updatedAt=1761748975338"
                 alt="Our Vision"

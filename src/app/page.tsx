@@ -136,7 +136,7 @@ export default function Home() {
             {movingCarouselImages.map((src, index) => (
               <CarouselItem key={index} className="pl-1 basis-full">
                 <div className="p-1">
-                  <div className="relative aspect-video">
+                  <div className="relative h-[60vh]">
                     <Image
                       src={src}
                       alt={`Carousel image ${index + 1}`}
@@ -185,60 +185,60 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative w-full pt-10 md:pt-16 lg:pt-20 pb-20 md:pb-32 lg:pb-40">
-        <Carousel
-          plugins={[Autoplay({ delay: 4000, stopOnInteraction: false })]}
-          opts={{ loop: true }}
-          className="absolute inset-0 w-full h-full"
-        >
-          <CarouselContent className="h-full">
-            {scheduleCarouselImages.map((src, index) => (
-              <CarouselItem key={index} className="h-full">
-                <Image
-                  src={src}
-                  alt={`Schedule background ${index + 1}`}
-                  fill
-                  className="object-fill"
-                />
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-        </Carousel>
-        <div className="absolute inset-0 bg-black/60" />
-
-        <div className="container relative grid items-center gap-12 px-4 md:px-6 lg:grid-cols-2">
-          <div className="space-y-4 animate-fade-in-up text-white">
-            <Badge variant="outline" className="bg-white/20 border-white/30 text-white">Upcoming Programs</Badge>
-            <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-4xl md:text-5xl flex items-center gap-3">
-              <Calendar className="h-8 w-8" />
-              Tune In to Our Daily Schedule
-            </h2>
-            <p className="max-w-[600px] text-white/80 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              From morning chants to evening discourses, our programming is designed to guide and inspire you throughout your day.
-            </p>
-            <Button asChild size="lg" variant="secondary">
-              <Link href="/schedule">
-                View Full Guide
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-          </div>
-          <div className="flex flex-col gap-4 animate-fade-in-up" style={{"--delay": "0.2s"}}>
-            {upcomingPrograms.map(program => (
-              <Card key={program.id} className="transition-all hover:shadow-md bg-white/10 backdrop-blur-sm border-white/20 text-white">
-                <CardContent className="p-4 flex items-center gap-4">
-                  <div className="bg-white/20 text-white p-3 rounded-lg flex flex-col items-center justify-center aspect-square w-20">
-                    <span className="text-sm font-semibold">{program.time.split(' ')[1]}</span>
-                    <span className="text-2xl font-bold tracking-tighter">{program.time.split(' ')[0]}</span>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-headline font-semibold">{program.title}</h3>
-                    <p className="text-sm text-white/80">{program.description}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+      <section className="w-full pt-10 md:pt-16 lg:pt-20 pb-20 md:pb-32 lg:pb-40 bg-black">
+        <div className="container grid items-center gap-12 px-4 md:px-6 lg:grid-cols-2">
+            <div className="relative w-full h-[50vh] animate-fade-in-up">
+                <Carousel
+                plugins={[Autoplay({ delay: 4000, stopOnInteraction: false })]}
+                opts={{ loop: true }}
+                className="w-full h-full rounded-lg overflow-hidden"
+                >
+                <CarouselContent className="h-full">
+                    {scheduleCarouselImages.map((src, index) => (
+                    <CarouselItem key={index} className="h-full">
+                        <Image
+                        src={src}
+                        alt={`Schedule background ${index + 1}`}
+                        fill
+                        className="object-fill"
+                        />
+                    </CarouselItem>
+                    ))}
+                </CarouselContent>
+                </Carousel>
+            </div>
+            <div className="space-y-4 animate-fade-in-up text-white" style={{animationDelay: '0.2s'}}>
+                <Badge variant="outline" className="bg-white/20 border-white/30 text-white">Upcoming Programs</Badge>
+                <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-4xl md:text-5xl flex items-center gap-3">
+                <Calendar className="h-8 w-8" />
+                Tune In to Our Daily Schedule
+                </h2>
+                <p className="max-w-[600px] text-white/80 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                From morning chants to evening discourses, our programming is designed to guide and inspire you throughout your day.
+                </p>
+                <div className="flex flex-col gap-4 mt-6">
+                {upcomingPrograms.map(program => (
+                <Card key={program.id} className="transition-all hover:shadow-md bg-white/10 backdrop-blur-sm border-white/20 text-white">
+                    <CardContent className="p-4 flex items-center gap-4">
+                    <div className="bg-white/20 text-white p-3 rounded-lg flex flex-col items-center justify-center aspect-square w-20">
+                        <span className="text-sm font-semibold">{program.time.split(' ')[1]}</span>
+                        <span className="text-2xl font-bold tracking-tighter">{program.time.split(' ')[0]}</span>
+                    </div>
+                    <div>
+                        <h3 className="text-lg font-headline font-semibold">{program.title}</h3>
+                        <p className="text-sm text-white/80">{program.description}</p>
+                    </div>
+                    </CardContent>
+                </Card>
+                ))}
+                </div>
+                <Button asChild size="lg" variant="secondary" className="mt-6">
+                <Link href="/schedule">
+                    View Full Guide
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+                </Button>
+            </div>
         </div>
       </section>
 
