@@ -1,36 +1,47 @@
-import { schedule } from '@/lib/data';
-import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Calendar, Clock, Sparkles } from 'lucide-react';
 
-export default function SchedulePage() {
-  const getPeriod = (time: string) => {
+import { schedule, type Program } from '@/lib/data';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Calendar, Clock, Sparkles, Sun, Moon, Sunset, Sunrise } from 'lucide-react';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+
+
+type Period = 'Morning' | 'Afternoon' | 'Evening' | 'Night';
+
+const getPeriod = (time: string): Period => {
     const hour = parseInt(time.split(':')[0], 10);
     const ampm = time.split(' ')[1];
     if (ampm === 'AM') {
-      if (hour >= 4 && hour < 12) return 'Morning';
+        if (hour >= 4 && hour < 12) return 'Morning';
     }
     if (ampm === 'PM') {
-      if (hour === 12 || (hour >= 1 && hour < 5)) return 'Afternoon';
-      if (hour >= 5 && hour < 9) return 'Evening';
+        if (hour === 12 || (hour >= 1 && hour < 5)) return 'Afternoon';
+        if (hour >= 5 && hour < 9) return 'Evening';
     }
     return 'Night';
-  };
+};
 
-  const periodColors = {
-    Morning: 'bg-amber-100 border-amber-200',
-    Afternoon: 'bg-sky-100 border-sky-200',
-    Evening: 'bg-purple-100 border-purple-200',
-    Night: 'bg-indigo-100 border-indigo-200',
-  };
+const programsByPeriod: Record<Period, Program[]> = {
+    Morning: [],
+    Afternoon: [],
+    Evening: [],
+    Night: [],
+};
 
-  const periodIconColors = {
-    Morning: 'text-amber-500',
-    Afternoon: 'text-sky-500',
-    Evening: 'text-purple-500',
-    Night: 'text-indigo-500',
-  };
+schedule.forEach(program => {
+    const period = getPeriod(program.time);
+    programsByPeriod[period].push(program);
+});
 
+const periodDetails: Record<Period, { icon: React.ElementType, color: string }> = {
+    Morning: { icon: Sunrise, color: 'text-amber-500' },
+    Afternoon: { icon: Sun, color: 'text-sky-500' },
+    Evening: { icon: Sunset, color: 'text-purple-500' },
+    Night: { icon: Moon, color: 'text-indigo-500' },
+};
+
+
+export default function SchedulePage() {
   return (
     <div className="bg-secondary/40">
       <div className="container py-16 md:py-24">
@@ -44,46 +55,60 @@ export default function SchedulePage() {
           </p>
         </div>
 
-        <div className="relative space-y-8">
-          {/* Vertical line for the timeline */}
-          <div className="absolute left-8 sm:left-1/2 top-4 bottom-4 w-0.5 bg-border -translate-x-1/2"></div>
-          
-          {schedule.map((program, index) => {
-            const isLive = program.title.toLowerCase().includes('live');
-            const period = getPeriod(program.time);
-            const sideClass = index % 2 === 0 ? 'sm:justify-start' : 'sm:justify-end';
-            const contentClass = index % 2 === 0 ? 'sm:pr-16' : 'sm:pl-16 sm:text-right';
-            const cardAnimationDelay = `${index * 0.1}s`;
+        <div className="space-y-12">
+            {(Object.keys(programsByPeriod) as Period[]).map((period, index) => {
+                const { icon: Icon, color } = periodDetails[period];
+                if (programsByPeriod[period].length === 0) return null;
 
-            return (
-              <div key={program.id} className={`flex items-center w-full ${sideClass} animate-fade-in-up`} style={{ animationDelay: cardAnimationDelay }}>
-                <div className={`relative w-full sm:w-1/2 ${contentClass}`}>
-                    {/* Dot on the timeline */}
-                    <div className={`absolute top-1/2 -translate-y-1/2 h-4 w-4 rounded-full bg-background border-2 border-primary ${index % 2 === 0 ? 'sm:right-0 sm:translate-x-[calc(50%_+_1px)]' : 'sm:left-0 sm:translate-x-[calc(-50%_-_1px)]'} left-8 -translate-x-[calc(50%_+_1px)]`}></div>
-
-                    <Card className={`transition-all hover:shadow-lg hover:-translate-y-1 border-l-4 ${isLive ? 'border-l-red-500' : 'border-l-primary'} ${periodColors[period]}`}>
-                        <CardContent className="p-4">
-                            <div className="flex items-center gap-4 mb-2">
-                                <Badge variant="secondary" className="whitespace-nowrap">
-                                    <Clock className="h-4 w-4 mr-1.5"/>
-                                    {program.time}
-                                </Badge>
-                                {isLive && (
-                                    <Badge variant="destructive" className="animate-pulse">
-                                      <div className="h-2 w-2 rounded-full bg-white mr-1.5"></div> LIVE
-                                    </Badge>
-                                )}
-                            </div>
-                            <h3 className="font-headline text-xl font-bold">{program.title}</h3>
-                            <p className="text-muted-foreground text-sm mt-1">{program.description}</p>
-                        </CardContent>
-                    </Card>
-                </div>
-              </div>
-            );
-          })}
+                return (
+                    <div key={period} className="animate-fade-in-up" style={{animationDelay: `${index * 0.2}s`}}>
+                        <h2 className={`flex items-center gap-3 text-3xl font-headline font-bold mb-6 ${color}`}>
+                            <Icon className="h-8 w-8" />
+                            {period} Schedule
+                        </h2>
+                        <Card className="shadow-lg overflow-hidden">
+                            <Table>
+                                <TableHeader>
+                                    <TableRow className="bg-muted/50 hover:bg-muted/50">
+                                        <TableHead className="w-[150px]">Time</TableHead>
+                                        <TableHead>Program</TableHead>
+                                        <TableHead className="hidden md:table-cell">Description</TableHead>
+                                    </TableRow>
+                                </TableHeader>
+                                <TableBody>
+                                    {programsByPeriod[period].map(program => {
+                                        const isLive = program.title.toLowerCase().includes('live');
+                                        return (
+                                            <TableRow key={program.id} className="transition-colors hover:bg-muted/30">
+                                                <TableCell className="font-medium">
+                                                    <div className="flex items-center gap-2">
+                                                        <Clock className="h-4 w-4 text-primary" />
+                                                        <span>{program.time}</span>
+                                                    </div>
+                                                </TableCell>
+                                                <TableCell>
+                                                    <div className="flex items-center gap-3">
+                                                        <span className="font-semibold">{program.title}</span>
+                                                        {isLive && (
+                                                            <Badge variant="destructive" className="animate-pulse whitespace-nowrap">
+                                                                <div className="h-2 w-2 rounded-full bg-white mr-1.5"></div> LIVE
+                                                            </Badge>
+                                                        )}
+                                                    </div>
+                                                </TableCell>
+                                                <TableCell className="hidden md:table-cell text-muted-foreground">{program.description}</TableCell>
+                                            </TableRow>
+                                        )
+                                    })}
+                                </TableBody>
+                            </Table>
+                        </Card>
+                    </div>
+                )
+            })}
         </div>
       </div>
     </div>
   );
 }
+
