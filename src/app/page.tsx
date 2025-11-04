@@ -25,8 +25,8 @@ const ourPrograms = [
     { id: '1', title: 'Hinduism Teachings', description: 'Explore the vast wisdom of Sanatana Dharma.', imageUrl: 'https://plus.unsplash.com/premium_photo-1675601485116-b083859583b2?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1974', imageHint: 'hinduism temple', genre: 'Hinduism', teacher: 'Scholars' },
     { id: '2', title: 'Buddhist Philosophy', description: 'Find peace through the teachings of the Buddha.', imageUrl: 'https://images.unsplash.com/photo-1549167008-dce1759943b9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1974', imageHint: 'buddhist statue', genre: 'Buddhism', teacher: 'Masters' },
     { id: '3', title: 'Jainism Principles', description: 'Learn about Ahimsa and non-violence.', imageUrl: 'https://media.istockphoto.com/id/494243298/photo/jain-temple-mahavira-in-jaisalmer-india.jpg?s=1024x1024&w=is&k=20&c=ysr4OAZ-yCc4l6cHpLMXB-0T10PKzIxYUOoM6fKxosU=', imageHint: 'jainism symbol', genre: 'Jainism', teacher: 'Gurus' },
-    { id: '4', title: 'Sikhism Values', description: 'Discover the principles of selfless service and equality.', imageUrl: 'https://plus.unsplash.com/premium_photo-1697730331435-92e07494db43?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1025', imageHint: 'golden temple', genre: 'Sikhism', teacher: 'Community' },
-    { id: '5', title: 'Interfaith Dialogue', description: 'Exploring the common ground between spiritual paths.', imageUrl: 'https://plus.unsplash.com/premium_photo-1736961713901-63076826b437?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=871', imageHint: 'religious books', genre: 'Interfaith', teacher: 'Various' }
+    { id: '4', title: 'Sikhism Values', description: 'Discover the principles of selfless service and equality.', imageUrl: 'https://images.unsplash.com/photo-1582512403322-a73c407c0303?q=80&w=2070&auto=format&fit=crop', imageHint: 'golden temple', genre: 'Sikhism', teacher: 'Community' },
+    { id: '5', title: 'Interfaith Dialogue', description: 'Exploring the common ground between spiritual paths.', imageUrl: 'https://plus.unsplash.com/premium_photo-1736961713901-63076826b437?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%D%3D&auto=format&fit=crop&q=80&w=871', imageHint: 'religious books', genre: 'Interfaith', teacher: 'Various' }
 ];
 
 const comingSoon = [
@@ -103,7 +103,7 @@ export default function Home() {
               A diverse range of programs dedicated to spiritual learning and cultural enrichment.
             </p>
           </div>
-          <Carousel opts={{ align: "start", loop: true }} className="w-full animate-fade-in-up">
+          <Carousel opts={{ align: "start", loop: true }} className="w-full animate-fade-in-up mb-16">
             <CarouselContent className="-ml-1">
               {ourPrograms.map((program) => (
                 <CarouselItem key={program.id} className="pl-1 md:basis-1/2 lg:basis-1/3">
@@ -125,9 +125,7 @@ export default function Home() {
             <CarouselNext className="hidden sm:flex" />
           </Carousel>
         </div>
-      </section>
-
-      <section className="w-full py-12 md:py-24 lg:py-32">
+        
         <Carousel
           plugins={[autoplay.current]}
           opts={{
@@ -138,14 +136,14 @@ export default function Home() {
         >
           <CarouselContent className="-ml-1">
             {movingCarouselImages.map((src, index) => (
-              <CarouselItem key={index} className="pl-1 basis-full md:basis-1/3 lg:basis-1/4">
+              <CarouselItem key={index} className="pl-1 basis-full">
                 <div className="p-1">
                   <div className="relative aspect-video">
                     <Image
                       src={src}
                       alt={`Carousel image ${index + 1}`}
                       fill
-                      className="object-fill rounded-lg"
+                      className="object-fill"
                     />
                   </div>
                 </div>
@@ -270,3 +268,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
