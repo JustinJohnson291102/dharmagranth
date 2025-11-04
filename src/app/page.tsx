@@ -242,7 +242,7 @@ export default function Home() {
                         src={src}
                         alt={`Schedule image ${index + 1}`}
                         fill
-                        className="object-cover"
+                        className="object-fill"
                       />
                     </div>
                   </div>
