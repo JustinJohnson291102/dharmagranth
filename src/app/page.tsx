@@ -237,7 +237,7 @@ export default function Home() {
               {scheduleCarouselImages.map((src, index) => (
                 <CarouselItem key={index} className="pl-1 basis-full">
                   <div className="p-1">
-                    <div className="relative h-[60vh]">
+                    <div className="relative h-[120vh]">
                       <Image
                         src={src}
                         alt={`Schedule image ${index + 1}`}
