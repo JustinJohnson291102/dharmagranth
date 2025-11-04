@@ -29,7 +29,7 @@ export default function LivePage() {
                       src="https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?q=80&w=2053&auto=format&fit=crop"
                       alt="Live Stream"
                       fill
-                      className="object-cover"
+                      className="object-fill"
                     />
                      <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
                         <p className="text-2xl font-bold text-white bg-black/50 px-8 py-4 rounded-lg">Live Stream Player</p>

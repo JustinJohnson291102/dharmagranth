@@ -9,6 +9,10 @@ import { Button } from '@/components/ui/button';
 import { List, Grid } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import type { Video } from '@/lib/definitions';
+import Image from 'next/image';
+import { Card, CardHeader, CardTitle, CardContent, CardFooter } from '@/components/ui/card';
+import Link from 'next/link';
+import { Badge } from '@/components/ui/badge';
 
 export default function VideosPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -116,7 +120,7 @@ function VideoListCard({ video }: { video: Video }) {
                         alt={video.title}
                         fill
                         sizes="(max-width: 640px) 100vw, 33vw"
-                        className="object-cover"
+                        className="object-fill"
                         data-ai-hint={video.thumbnailHint}
                     />
                 </div>
