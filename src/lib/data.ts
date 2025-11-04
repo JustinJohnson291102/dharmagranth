@@ -23,19 +23,28 @@ export const videos: Video[] = [
 export const genres = [...new Set(videos.map(v => v.genre))];
 export const teachers = [...new Set(videos.map(v => v.teacher))];
 
-const weeklyProgramTemplate = [
-    { time: '06:00 AM', title: 'Morning Chants', description: 'Start your day with sacred mantras.' },
-    { time: '07:00 AM', title: 'Yoga Session', description: 'A gentle yoga session to energize your body.' },
-    { time: '08:00 AM', title: 'Spiritual Discourse', description: 'Talks on Vedanta and mindful living.' },
-    { time: '05:00 PM', title: 'Evening Kirtan', description: 'Devotional chanting to soothe the soul.' },
-    { time: '07:00 PM', title: 'Documentary Hour', description: 'Films on spiritual heritage and culture.' },
-    { time: '08:30 PM', title: 'Guided Meditation', description: 'A session to calm the mind before sleep.' },
-]
-
-export const schedule: Program[] = (['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'] as const).flatMap((day, dayIndex) => 
-    weeklyProgramTemplate.map((program, programIndex) => ({
-        ...program,
-        id: `${dayIndex}-${programIndex}`,
-        day: day,
-    }))
-);
+export const schedule: Program[] = [
+    { id: '1', time: '12:00 AM', title: 'BHAJAN', description: 'Soothing devotional music to begin the day.' },
+    { id: '2', time: '04:30 AM', title: 'SUNDARKAND PATH', description: 'Recitation of the sacred Sundarkand.' },
+    { id: '3', time: '06:15 AM', title: 'SALASAR BALA JI AARTI', description: 'Live morning aarti from Salasar Balaji temple.' },
+    { id: '4', time: '07:00 AM', title: 'KHATU SHYAM JI D-LIVE AARTI', description: 'Direct telecast of the aarti from Khatu Shyam Ji temple.' },
+    { id: '5', time: '07:30 AM', title: 'BHAJAN CHALISA', description: 'A collection of powerful bhajans and chalisas.' },
+    { id: '6', time: '08:00 AM', title: 'BHAJAN CHALISA', description: 'Continued session of devotional hymns.' },
+    { id: '7', time: '09:00 AM', title: 'JHANDEWALAN MATA LIVE AARTI', description: 'Witness the grand aarti live from Jhandewalan Mata Mandir.' },
+    { id: '8', time: '10:30 AM', title: 'KATHA D-LIVE', description: 'Live spiritual discourse from revered saints.' },
+    { id: '9', time: '12:00 PM', title: 'JHANDEWALAN MATA LIVE AARTI', description: 'Mid-day aarti live from Jhandewalan Mata Mandir.' },
+    { id: '10', time: '03:00 PM', title: 'KAVI SAMMELAN', description: 'An enriching session of devotional poetry.' },
+    { id: '11', time: '04:30 PM', title: 'GAYATRI MANTRA', description: 'Chanting of the powerful Gayatri Mantra for spiritual upliftment.' },
+    { id: '12', time: '05:00 PM', title: 'CHALISA', description: 'Recitation of various chalisas for divine blessings.' },
+    { id: '13', time: '06:30 PM', title: 'KHATU SHYAM JI D-LIVE AARTI', description: 'Evening aarti broadcast live from Khatu Shyam Ji temple.' },
+    { id: '14', time: '06:45 PM', title: 'SARYU MATA LIVE AARTI FROM AYODHYA', description: 'Experience the divine Saryu Aarti from the holy city of Ayodhya.' },
+    { id: '15', time: '07:05 PM', title: 'CHITRAKOOT DHAM LIVE AARTI', description: 'Live aarti from the sacred grounds of Chitrakoot Dham.' },
+    { id: '16', time: '07:30 PM', title: 'JHANDEWALAN MATA LIVE AARTI', description: 'Evening aarti live from Jhandewalan Mata Mandir.' },
+    { id: '17', time: '08:05 PM', title: 'DHARMGRANTH TV SPECIAL SHOW', description: 'A special feature presentation from Dharmagranth TV.' },
+    { id: '18', time: '09:00 PM', title: 'HANUMANGARHI LIVE AARTI FROM AYODHYA', description: 'Night aarti live from Hanumangarhi, Ayodhya.' },
+    { id: '19', time: '09:30 PM', title: 'KATHA D-LIVE', description: 'Nightly spiritual discourse to conclude your day.' },
+    { id: '20', time: '10:00 PM', title: 'KATHA D-LIVE', description: 'Continued live spiritual discourse.' },
+    { id: '21', time: '10:30 PM', title: 'KATHA D-LIVE', description: 'Further insights in the ongoing spiritual discourse.' },
+    { id: '22', time: '11:00 PM', title: 'KATHA D-LIVE', description: 'Late-night session of spiritual discourse.' },
+    { id: '23', time: '11:30 PM', title: 'KATHA D-LIVE', description: 'Concluding part of the live spiritual discourse.' },
+];

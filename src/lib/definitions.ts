@@ -13,5 +13,4 @@ export type Program = {
   time: string;
   title: string;
   description: string;
-  day: 'Monday' | 'Tuesday' | 'Wednesday' | 'Thursday' | 'Friday' | 'Saturday' | 'Sunday';
 };
