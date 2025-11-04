@@ -55,6 +55,12 @@ const movingCarouselImages = [
   'https://ik.imagekit.io/ggelm1lwa/Screenshot%20(102).png?updatedAt=1762260925823',
 ];
 
+const scheduleCarouselImages = [
+  'https://ik.imagekit.io/ggelm1lwa/Screenshot%20(107).png?updatedAt=1762260925332',
+  'https://ik.imagekit.io/ggelm1lwa/Screenshot%20(105).png?updatedAt=1762260926261',
+  'https://ik.imagekit.io/ggelm1lwa/Screenshot%20(106).png?updatedAt=1762260925955',
+];
+
 
 export default function Home() {
   const upcomingPrograms = schedule.slice(0, 3);
@@ -153,7 +159,7 @@ export default function Home() {
         </Carousel>
       </section>
 
-      <section className="w-full pt-12 md:pt-20 lg:pt-24 pb-12 md:pb-24 lg:pb-32 bg-card">
+      <section className="w-full pt-8 md:pt-12 pb-12 md:pb-24 lg:pb-32 bg-card">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12 animate-fade-in-up">
             <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-5xl">Featured Videos</h2>
@@ -187,6 +193,63 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="relative w-full py-20 md:py-32 lg:py-40">
+        <Carousel
+          plugins={[Autoplay({ delay: 4000, stopOnInteraction: false })]}
+          opts={{ loop: true }}
+          className="absolute inset-0 w-full h-full"
+        >
+          <CarouselContent className="h-full">
+            {scheduleCarouselImages.map((src, index) => (
+              <CarouselItem key={index} className="h-full">
+                <Image
+                  src={src}
+                  alt={`Schedule background ${index + 1}`}
+                  fill
+                  className="object-fill"
+                />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
+        <div className="absolute inset-0 bg-black/60" />
+
+        <div className="container relative grid items-center gap-12 px-4 md:px-6 lg:grid-cols-2">
+          <div className="space-y-4 animate-fade-in-up text-white">
+            <Badge variant="outline" className="bg-white/20 border-white/30 text-white">Upcoming Programs</Badge>
+            <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-4xl md:text-5xl flex items-center gap-3">
+              <Calendar className="h-8 w-8" />
+              Tune In to Our Daily Schedule
+            </h2>
+            <p className="max-w-[600px] text-white/80 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              From morning chants to evening discourses, our programming is designed to guide and inspire you throughout your day.
+            </p>
+            <Button asChild size="lg" variant="secondary">
+              <Link href="/schedule">
+                View Full Guide
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
+          <div className="flex flex-col gap-4 animate-fade-in-up" style={{"--delay": "0.2s"}}>
+            {upcomingPrograms.map(program => (
+              <Card key={program.id} className="transition-all hover:shadow-md bg-white/10 backdrop-blur-sm border-white/20 text-white">
+                <CardContent className="p-4 flex items-center gap-4">
+                  <div className="bg-white/20 text-white p-3 rounded-lg flex flex-col items-center justify-center aspect-square w-20">
+                    <span className="text-sm font-semibold">{program.time.split(' ')[1]}</span>
+                    <span className="text-2xl font-bold tracking-tighter">{program.time.split(' ')[0]}</span>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-headline font-semibold">{program.title}</h3>
+                    <p className="text-sm text-white/80">{program.description}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="w-full py-12 md:py-20 border-y bg-secondary">
         <div className="container space-y-8 animate-fade-in-up">
             <div className="text-center">
@@ -197,44 +260,8 @@ export default function Home() {
             <LogoCarousel />
         </div>
       </section>
-      
-      <section className="w-full py-12 md:py-24 lg:py-32">
-        <div className="container grid items-center gap-12 px-4 md:px-6 lg:grid-cols-2">
-          <div className="space-y-4 animate-fade-in-up">
-            <Badge variant="outline">Upcoming Programs</Badge>
-            <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-4xl md:text-5xl">
-              Tune In to Our Daily Schedule
-            </h2>
-            <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              From morning chants to evening discourses, our programming is designed to guide and inspire you throughout your day.
-            </p>
-            <Button asChild size="lg">
-              <Link href="/schedule">
-                View Full Guide
-                <Calendar className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-          </div>
-          <div className="flex flex-col gap-4 animate-fade-in-up" style={{"--delay": "0.2s"}}>
-            {upcomingPrograms.map(program => (
-              <Card key={program.id} className="transition-all hover:shadow-md">
-                <CardContent className="p-4 flex items-center gap-4">
-                  <div className="bg-primary/10 text-primary p-3 rounded-lg flex flex-col items-center justify-center aspect-square w-20">
-                    <span className="text-sm font-semibold">{program.time.split(' ')[1]}</span>
-                    <span className="text-2xl font-bold tracking-tighter">{program.time.split(' ')[0]}</span>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-headline font-semibold">{program.title}</h3>
-                    <p className="text-sm text-muted-foreground">{program.description}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
+      <section className="w-full py-12 md:py-24 lg:py-32">
         <div className="container px-4 md:px-6">
           <div className="mb-12 text-center animate-fade-in-up">
             <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-5xl mb-4">Coming Soon</h2>
@@ -268,5 +295,7 @@ export default function Home() {
     </div>
   );
 }
+
+    
 
     
