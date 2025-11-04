@@ -29,14 +29,6 @@ const ourPrograms = [
     { id: '5', title: 'Interfaith Dialogue', description: 'Exploring the common ground between spiritual paths.', imageUrl: 'https://plus.unsplash.com/premium_photo-1736961713901-63076826b437?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=871', imageHint: 'religious books', genre: 'Interfaith', teacher: 'Various' }
 ];
 
-const comingSoon = [
-    { id: '1', title: 'Ancient Scriptures', description: 'Unveiling the wisdom of the Vedas and Upanishads.', imageUrl: 'https://images.unsplash.com/photo-1759333344417-4116f7c5cf28?q=80&w=2070&auto=format&fit=crop', imageHint: 'ancient manuscript', genre: 'Scriptures', teacher: 'Scholars' },
-    { id: '2', title: 'Temple Architecture', description: 'Explore the sacred geometry of Indian temples.', imageUrl: 'https://images.unsplash.com/photo-1566915682737-3e97a7eed93b?q=80&w=2070&auto=format&fit=crop', imageHint: 'temple architecture', genre: 'Documentary', teacher: 'Experts' },
-    { id: '3', title: 'Ganges Ceremony', description: 'Witness the spectacular Ganga Aarti from Varanasi.', imageUrl: 'https://images.unsplash.com/photo-1605818725676-23c12926e41f?q=80&w=2070&auto=format&fit=crop', imageHint: 'ganga aarti', genre: 'Cultural', teacher: 'N/A' },
-    { id: '4', title: 'The Power of Prayer', description: 'Understanding the science and art of prayer.', imageUrl: 'https://images.unsplash.com/photo-1554566205-d2a9e64cc5e9?q=80&w=2070&auto=format&fit=crop', imageHint: 'people praying', genre: 'Discourse', teacher: 'Spiritual Masters' },
-    { id: '5', title: 'Indian Instruments', description: 'A journey through the sounds of traditional Indian music.', imageUrl: 'https://images.unsplash.com/photo-1676804899250-18a342d77e16?q=80&w=2070&auto=format&fit=crop', imageHint: 'music instruments', genre: 'Music', teacher: 'Musicians' }
-];
-
 const movingCarouselImages = [
   'https://ik.imagekit.io/ggelm1lwa/Screenshot%20(91).png?updatedAt=1762260925846',
   'https://ik.imagekit.io/ggelm1lwa/Screenshot%20(93).png?updatedAt=1762260926141',
@@ -260,42 +252,6 @@ export default function Home() {
             <LogoCarousel />
         </div>
       </section>
-
-      <section className="w-full py-12 md:py-24 lg:py-32">
-        <div className="container px-4 md:px-6">
-          <div className="mb-12 text-center animate-fade-in-up">
-            <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-5xl mb-4">Coming Soon</h2>
-             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed mx-auto">
-              Exciting new programs and series are on the way. Here's a sneak peek.
-            </p>
-          </div>
-          <Carousel opts={{ align: "start", loop: true }} className="w-full animate-fade-in-up">
-            <CarouselContent className="-ml-1">
-              {comingSoon.map((program) => (
-                <CarouselItem key={program.id} className="pl-1 md:basis-1/2 lg:basis-1/3">
-                  <div className="p-1 h-full">
-                      <VideoCard video={{
-                        id: program.id,
-                        title: program.title,
-                        description: program.description,
-                        thumbnailUrl: program.imageUrl,
-                        thumbnailHint: program.imageHint,
-                        genre: program.genre,
-                        teacher: program.teacher,
-                      }} />
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="hidden sm:flex" />
-            <CarouselNext className="hidden sm:flex" />
-          </Carousel>
-        </div>
-      </section>
     </div>
   );
 }
-
-    
-
-    
