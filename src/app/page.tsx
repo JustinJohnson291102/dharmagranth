@@ -24,7 +24,7 @@ const ourPrograms = [
     { id: '1', title: 'Hinduism Teachings', description: 'Explore the vast wisdom of Sanatana Dharma.', imageUrl: 'https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?q=80&w=2053&auto=format&fit=crop', imageHint: 'hinduism temple', genre: 'Hinduism', teacher: 'Scholars' },
     { id: '2', title: 'Buddhist Philosophy', description: 'Find peace through the teachings of the Buddha.', imageUrl: 'https://images.unsplash.com/photo-1542611980-a61d173e513f?q=80&w=1974&auto=format&fit=crop', imageHint: 'buddhist statue', genre: 'Buddhism', teacher: 'Masters' },
     { id: '3', title: 'Jainism Principles', description: 'Learn about Ahimsa and non-violence.', imageUrl: 'https://images.unsplash.com/photo-1620051284379-3732d80f8e17?q=80&w=1932&auto=format&fit=crop', imageHint: 'jainism symbol', genre: 'Jainism', teacher: 'Gurus' },
-    { id: '4', title: 'Sikhism Values', description: 'Discover the principles of selfless service and equality.', imageUrl: 'https://plus.unsplash.com/premium_photo-1697730331435-92e07494db43?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1025?q=80&w=2070&auto=format&fit=crop', imageHint: 'golden temple', genre: 'Sikhism', teacher: 'Community' },
+    { id: '4', title: 'Sikhism Values', description: 'Discover the principles of selfless service and equality.', imageUrl: 'https://plus.unsplash.com/premium_photo-1697730331435-92e07494db43?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1025', imageHint: 'golden temple', genre: 'Sikhism', teacher: 'Community' },
     { id: '5', title: 'Interfaith Dialogue', description: 'Exploring the common ground between spiritual paths.', imageUrl: 'https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=2070&auto=format&fit=crop', imageHint: 'religious books', genre: 'Interfaith', teacher: 'Various' }
 ];
 
@@ -48,7 +48,7 @@ export default function Home() {
             src={heroImage.imageUrl}
             alt={heroImage.description}
             fill
-            className="object-cover"
+            className="object-fill"
             priority
             data-ai-hint={heroImage.imageHint}
           />
