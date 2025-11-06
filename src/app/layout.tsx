@@ -5,7 +5,6 @@ import { Toaster } from '@/components/ui/toaster';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { Inter, Literata } from 'next/font/google';
-import SplashScreen from '@/components/layout/SplashScreen';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -33,7 +32,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={cn('scroll-smooth', inter.variable, literata.variable)}>
       <body className={cn('font-body antialiased min-h-screen flex flex-col')}>
-        <SplashScreen />
         <Header />
         <main className="flex-1 w-full">{children}</main>
         <Footer />

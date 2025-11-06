@@ -136,7 +136,7 @@ export default function Home() {
             {movingCarouselImages.map((src, index) => (
               <CarouselItem key={index} className="pl-1 basis-full">
                 <div className="p-1">
-                  <div className="relative h-[60vh]">
+                  <div className="relative h-[90vh]">
                     <Image
                       src={src}
                       alt={`Carousel image ${index + 1}`}
