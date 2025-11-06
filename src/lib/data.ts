@@ -27,6 +27,8 @@ export const hindiVideos: Video[] = [
   { id: 'h3', title: 'भए प्रगट कृपाला दीनदयाला', description: 'श्री रामअवतार स्तुति बधाई, सोहर, जन्मदिन अवसरों पर लोकप्रिय है। भए प्रगट कृपाला दीनदयाला, कौसल्या हितकारी ।', thumbnailUrl: getVideoImage('video-1').url, thumbnailHint: getVideoImage('video-1').hint, genre: 'भजन', teacher: 'तुलसीदास' },
   { id: 'h4', title: 'राधा श्री राधा-धुन', description: 'राधा, श्री राधा, श्री राधा, श्री, राधा राधा ॥', thumbnailUrl: getVideoImage('video-5').url, thumbnailHint: getVideoImage('video-5').hint, genre: 'भजन', teacher: 'भक्तगण' },
   { id: 'h5', title: 'तुम्हारे हवाले अहोई मैया', description: 'तुम्हरे हवाले किया मैंने गौरी मैया, रखना तू इनका ख्याल माँ, रखा अहोई का व्रत मैंने विधिवत पूंजूँ, तोहे फैले फूले बाल गोपाल', thumbnailUrl: getVideoImage('video-2').url, thumbnailHint: getVideoImage('video-2').hint, genre: 'अहोई अष्टमी भजन', teacher: 'महिला मंडली' },
+  { id: 'h6', title: 'बजरंग बाण', description: 'निश्चय प्रेम प्रतीति ते, बिनय करैं सनमान। तेहि के कारज सकल शुभ, सिद्ध करैं हनुमान॥', thumbnailUrl: 'https://plus.unsplash.com/premium_photo-1675601485116-b083859583b2?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1974', thumbnailHint: 'hanuman spiritual', genre: 'भजन', teacher: 'संत परंपरा' },
+  { id: 'h7', title: 'प्रभु राम का सुमिरन कर', description: 'प्रभु राम का सुमिरन कर, हर दुःख मिट जाएगा, यही राम नाम तुझको, भव पार लगाएगा ॥', thumbnailUrl: 'https://images.unsplash.com/photo-1549167008-dce1759943b9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1974', thumbnailHint: 'ram spiritual', genre: 'भजन', teacher: 'संत परंपरा' },
 ];
 
 export const genres = [...new Set(videos.map(v => v.genre))];
@@ -57,5 +59,3 @@ export const schedule: Program[] = [
     { id: '22', time: '11:00 PM', title: 'KATHA D-LIVE', description: 'Late-night session of spiritual discourse.' },
     { id: '23', time: '11:30 PM', title: 'KATHA D-LIVE', description: 'Concluding part of the live spiritual discourse.' },
 ];
-
-    
