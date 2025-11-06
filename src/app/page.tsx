@@ -162,8 +162,8 @@ export default function Home() {
           <div className="space-y-8 animate-fade-in-up">
             {hindiVideos.map((video, index) => (
               <Card key={index} className="overflow-hidden shadow-lg transition-all hover:shadow-xl w-full">
-                <div className={`grid md:grid-cols-2 items-center`}>
-                  <div className={`relative aspect-video ${index % 2 !== 0 ? 'md:order-last' : ''}`}>
+                <div className="grid md:grid-cols-2 items-center">
+                  <div className="relative aspect-video">
                     <Image 
                       src={video.thumbnailUrl}
                       alt={video.title}
