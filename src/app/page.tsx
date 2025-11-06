@@ -6,8 +6,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
-import { videos, schedule } from '@/lib/data';
-import { ArrowRight, PlayCircle, Calendar } from 'lucide-react';
+import { videos, schedule, hindiVideos } from '@/lib/data';
+import { ArrowRight, PlayCircle, Calendar, Mic2, BookOpen } from 'lucide-react';
 import {
   Carousel,
   CarouselContent,
@@ -136,7 +136,7 @@ export default function Home() {
             {movingCarouselImages.map((src, index) => (
               <CarouselItem key={index} className="pl-1 basis-full">
                 <div className="p-1">
-                  <div className="relative h-[90vh]">
+                  <div className="relative h-[60vh]">
                     <Image
                       src={src}
                       alt={`Carousel image ${index + 1}`}
@@ -151,7 +151,7 @@ export default function Home() {
         </Carousel>
       </section>
 
-      <section className="w-full pt-8 md:pt-12 pb-12 md:pb-24 lg:pb-32 bg-card">
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-card">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12 animate-fade-in-up">
             <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-5xl">Featured Videos</h2>
@@ -159,22 +159,31 @@ export default function Home() {
               Explore a selection of our most popular discourses, guided meditations, and cultural programs.
             </p>
           </div>
-          <Carousel
-            opts={{ align: "start" }}
-            className="w-full animate-fade-in-up"
-          >
-            <CarouselContent>
-              {videos.slice(0, 9).map((video) => (
-                <CarouselItem key={video.id} className="md:basis-1/2 lg:basis-1/3">
-                  <div className="p-1 h-full">
-                    <VideoCard video={video} />
+          <div className="space-y-8 animate-fade-in-up">
+            {hindiVideos.map((video, index) => (
+              <Card key={index} className="overflow-hidden shadow-lg transition-all hover:shadow-xl">
+                <div className="grid md:grid-cols-2">
+                  <div className="relative aspect-video">
+                    <Image 
+                      src={video.thumbnailUrl}
+                      alt={video.title}
+                      fill
+                      className="object-cover"
+                      data-ai-hint={video.thumbnailHint}
+                    />
+                     <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                        <PlayCircle className="h-16 w-16 text-white/80" />
+                    </div>
                   </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="hidden sm:flex" />
-            <CarouselNext className="hidden sm:flex" />
-          </Carousel>
+                  <div className="p-6 flex flex-col justify-center">
+                    <Badge variant="secondary" className="w-fit mb-2">{video.genre}</Badge>
+                    <h3 className="text-2xl font-headline font-bold mb-2">{video.title}</h3>
+                    <p className="text-muted-foreground">{video.description}</p>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
           <div className="text-center mt-12 animate-fade-in-up">
             <Button asChild>
               <Link href="/videos">
@@ -265,3 +274,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
