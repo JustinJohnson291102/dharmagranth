@@ -104,7 +104,7 @@ export default function Home() {
           <Carousel opts={{ align: "start", loop: true }} className="w-full animate-fade-in-up mb-16">
             <CarouselContent className="-ml-1">
               {ourPrograms.map((program) => (
-                <CarouselItem key={program.id} className="pl-1 md:basis-1/2 lg:basis-1/3">
+                <CarouselItem key={program.id} className="pl-1 md:basis-1/3 lg:basis-1/4">
                   <div className="p-1 h-full">
                       <VideoCard video={{
                         id: program.id,
@@ -136,7 +136,7 @@ export default function Home() {
             {movingCarouselImages.map((src, index) => (
               <CarouselItem key={index} className="pl-1 basis-full">
                 <div className="p-1">
-                  <div className="relative h-[60vh]">
+                  <div className="relative h-[30vh]">
                     <Image
                       src={src}
                       alt={`Carousel image ${index + 1}`}
@@ -194,7 +194,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full py-8 md:py-12 bg-secondary">
+      <section className="w-full py-4 md:py-6 bg-secondary">
         <div className="container grid items-center gap-12 px-4 md:px-6 lg:grid-cols-2">
             <div className="space-y-4 animate-fade-in-up">
                 <Badge variant="outline">Upcoming Programs</Badge>
@@ -274,5 +274,7 @@ export default function Home() {
     </div>
   );
 }
+
+    
 
     
