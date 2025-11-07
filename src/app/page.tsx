@@ -65,7 +65,7 @@ export default function Home() {
             src="https://ik.imagekit.io/ggelm1lwa/dharmgranthtv.jpeg?updatedAt=1761734926711"
             alt="A collage representing various aspects of dharmic traditions."
             fill
-            className="object-cover"
+            className="object-fill"
             priority
             data-ai-hint="dharmic collage"
           />
@@ -149,7 +149,7 @@ export default function Home() {
                       src={src}
                       alt={`Carousel image ${index + 1}`}
                       fill
-                      className="object-cover rounded-lg"
+                      className="object-fill rounded-lg"
                     />
                   </div>
                 </div>
@@ -176,7 +176,7 @@ export default function Home() {
                       src={video.thumbnailUrl}
                       alt={video.title}
                       fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="object-fill group-hover:scale-105 transition-transform duration-300"
                       data-ai-hint={video.thumbnailHint}
                     />
                      <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
@@ -261,7 +261,7 @@ export default function Home() {
                         src={src}
                         alt={`Schedule image ${index + 1}`}
                         fill
-                        className="object-cover rounded-lg"
+                        className="object-fill rounded-lg"
                       />
                     </div>
                   </div>
