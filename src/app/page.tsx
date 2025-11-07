@@ -60,7 +60,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-[100dvh]">
-      <section className="relative w-full h-[80vh]">
+      <section className="relative w-full h-[100vh]">
         <Image
             src="https://ik.imagekit.io/ggelm1lwa/dharmgranthtv.jpeg?updatedAt=1761734926711"
             alt="A collage representing various aspects of dharmic traditions."
@@ -105,7 +105,7 @@ export default function Home() {
             <CarouselContent className="-ml-1">
               {ourPrograms.map((program) => (
                 <CarouselItem key={program.id} className="pl-1 md:basis-1/3 lg:basis-1/4">
-                  <div className="p-1 h-full">
+                  <div className="p-1 h-full w-[75%] mx-auto">
                       <VideoCard video={{
                         id: program.id,
                         title: program.title,
@@ -136,7 +136,7 @@ export default function Home() {
             {movingCarouselImages.map((src, index) => (
               <CarouselItem key={index} className="pl-1 basis-full">
                 <div className="p-1">
-                  <div className="relative h-[30vh]">
+                  <div className="relative h-[100vh]">
                     <Image
                       src={src}
                       alt={`Carousel image ${index + 1}`}
@@ -159,9 +159,9 @@ export default function Home() {
               Explore a selection of our most popular discourses, guided meditations, and cultural programs.
             </p>
           </div>
-          <div className="space-y-8 animate-fade-in-up">
+          <div className="space-y-16 animate-fade-in-up">
             {hindiVideos.map((video, index) => (
-              <Card key={index} className="overflow-hidden shadow-lg transition-all hover:shadow-xl w-full">
+              <Card key={index} className="overflow-hidden shadow-lg transition-all hover:shadow-xl w-full max-w-4xl mx-auto">
                 <div className="grid md:grid-cols-2 items-center">
                   <div className="relative aspect-video">
                     <Image 
@@ -274,6 +274,8 @@ export default function Home() {
     </div>
   );
 }
+
+    
 
     
 
