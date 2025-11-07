@@ -167,7 +167,7 @@ export default function Home() {
               Explore a selection of our most popular discourses, guided meditations, and cultural programs.
             </p>
           </div>
-          <div className="space-y-8 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+          <div className="space-y-12 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
             {hindiVideos.map((video, index) => (
               <Card key={index} className="overflow-hidden shadow-lg transition-all hover:shadow-primary/20 w-full max-w-4xl mx-auto border-transparent hover:border-primary/20 border-2 bg-card/80 backdrop-blur-sm group">
                 <div className="grid md:grid-cols-2 items-center">
@@ -284,5 +284,3 @@ export default function Home() {
     </div>
   );
 }
-
-    

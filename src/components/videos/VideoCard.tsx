@@ -55,5 +55,3 @@ export default function VideoCard({ video, className, imageClassName }: VideoCar
     </Card>
   );
 }
-
-    

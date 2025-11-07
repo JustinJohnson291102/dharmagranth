@@ -120,7 +120,7 @@
     background-image:
       radial-gradient(hsl(var(--primary) / 0.05) 1px, transparent 1px),
       radial-gradient(hsl(var(--primary) / 0.05) 1px, transparent 1px);
-    background-size: 40px 40px, 40px 40px;
+    background-size: 40px 40px;
     background-position: 0 0, 20px 20px;
   }
   .bg-pattern-dark {
@@ -129,5 +129,3 @@
     background-size: 30px 30px;
   }
 }
-
-    
