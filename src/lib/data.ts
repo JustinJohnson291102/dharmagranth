@@ -22,13 +22,13 @@ export const videos: Video[] = [
 ];
 
 export const hindiVideos: Video[] = [
-  { id: 'h1', title: 'नाचे नन्दलाल, नचावे हरि की मईआ', description: 'नाचे नन्दलाल, नचावे हरि की मईआ ॥ नचावे हरि की मईआ...', thumbnailUrl: getVideoImage('video-8').url, thumbnailHint: getVideoImage('video-8').hint, genre: 'भजन', teacher: 'लोक कलाकार' },
-  { id: 'h2', title: 'यह तो प्रेम की बात है उधो', description: 'यह तो प्रेम की बात है उधो, बंदगी तेरे बस की नहीं है। यहाँ सर देके होते सौदे...', thumbnailUrl: getVideoImage('video-6').url, thumbnailHint: getVideoImage('video-6').hint, genre: 'भजन', teacher: 'संत परंपरा' },
-  { id: 'h3', title: 'भए प्रगट कृपाला दीनदयाला', description: 'श्री रामअवतार स्तुति बधाई, सोहर, जन्मदिन अवसरों पर लोकप्रिय है। भए प्रगट कृपाला दीनदयाला, कौसल्या हितकारी ।', thumbnailUrl: getVideoImage('video-1').url, thumbnailHint: getVideoImage('video-1').hint, genre: 'भजन', teacher: 'तुलसीदास' },
-  { id: 'h4', title: 'राधा श्री राधा-धुन', description: 'राधा, श्री राधा, श्री राधा, श्री, राधा राधा ॥', thumbnailUrl: getVideoImage('video-5').url, thumbnailHint: getVideoImage('video-5').hint, genre: 'भजन', teacher: 'भक्तगण' },
-  { id: 'h5', title: 'तुम्हारे हवाले अहोई मैया', description: 'तुम्हरे हवाले किया मैंने गौरी मैया, रखना तू इनका ख्याल माँ, रखा अहोई का व्रत मैंने विधिवत पूंजूँ, तोहे फैले फूले बाल गोपाल', thumbnailUrl: getVideoImage('video-2').url, thumbnailHint: getVideoImage('video-2').hint, genre: 'अहोई अष्टमी भजन', teacher: 'महिला मंडली' },
-  { id: 'h6', title: 'बजरंग बाण', description: 'निश्चय प्रेम प्रतीति ते, बिनय करैं सनमान। तेहि के कारज सकल शुभ, सिद्ध करैं हनुमान॥', thumbnailUrl: 'https://plus.unsplash.com/premium_photo-1675601485116-b083859583b2?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1974', thumbnailHint: 'hanuman spiritual', genre: 'भजन', teacher: 'संत परंपरा' },
-  { id: 'h7', title: 'प्रभु राम का सुमिरन कर', description: 'प्रभु राम का सुमिरन कर, हर दुःख मिट जाएगा, यही राम नाम तुझको, भव पार लगाएगा ॥', thumbnailUrl: 'https://images.unsplash.com/photo-1549167008-dce1759943b9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1974', thumbnailHint: 'ram spiritual', genre: 'भजन', teacher: 'संत परंपरा' },
+  { id: 'h1', title: 'नाचे नन्दलाल, नचावे हरि की मईआ', description: 'नाचे नन्दलाल, नचावे हरि की मईआ ॥ नचावे हरि की मईआ...', thumbnailUrl: 'https://images.unsplash.com/photo-1605043536035-64f34563b789?q=80&w=2070&auto=format&fit=crop', thumbnailHint: 'krishna statue', genre: 'भजन', teacher: 'लोक कलाकार' },
+  { id: 'h2', title: 'यह तो प्रेम की बात है उधो', description: 'यह तो प्रेम की बात है उधो, बंदगी तेरे बस की नहीं है। यहाँ सर देके होते सौदे...', thumbnailUrl: 'https://images.unsplash.com/photo-1610212570415-470a1f4225a5?q=80&w=1934&auto=format&fit=crop', thumbnailHint: 'spiritual worship', genre: 'भजन', teacher: 'संत परंपरा' },
+  { id: 'h3', title: 'भए प्रगट कृपाला दीनदयाला', description: 'श्री रामअवतार स्तुति बधाई, सोहर, जन्मदिन अवसरों पर लोकप्रिय है। भए प्रगट कृपाला दीनदयाला, कौसल्या हितकारी ।', thumbnailUrl: 'https://images.unsplash.com/photo-1595089304381-e28959d58852?q=80&w=1974&auto=format&fit=crop', thumbnailHint: 'ram statue', genre: 'भजन', teacher: 'तुलसीदास' },
+  { id: 'h4', title: 'राधा श्री राधा-धुन', description: 'राधा, श्री राधा, श्री राधा, श्री, राधा राधा ॥', thumbnailUrl: 'https://images.unsplash.com/photo-1649615024732-353db0425a8e?q=80&w=1974&auto=format&fit=crop', thumbnailHint: 'radha krishna', genre: 'भजन', teacher: 'भक्तगण' },
+  { id: 'h5', title: 'तुम्हारे हवाले अहोई मैया', description: 'तुम्हरे हवाले किया मैंने गौरी मैया, रखना तू इनका ख्याल माँ, रखा अहोई का व्रत मैंने विधिवत पूंजूँ, तोहे फैले फूले बाल गोपाल', thumbnailUrl: 'https://images.unsplash.com/photo-1588612164426-38f321946811?q=80&w=2070&auto=format&fit=crop', thumbnailHint: 'hindu goddess', genre: 'अहोई अष्टमी भजन', teacher: 'महिला मंडली' },
+  { id: 'h6', title: 'बजरंग बाण', description: 'निश्चय प्रेम प्रतीति ते, बिनय करैं सनमान। तेहि के कारज सकल शुभ, सिद्ध करैं हनुमान॥', thumbnailUrl: 'https://images.unsplash.com/photo-1680872844802-34a6ed7a2e2b?q=80&w=1964&auto=format&fit=crop', thumbnailHint: 'hanuman statue', genre: 'भजन', teacher: 'संत परंपरा' },
+  { id: 'h7', title: 'प्रभु राम का सुमिरन कर', description: 'प्रभु राम का सुमिरन कर, हर दुःख मिट जाएगा, यही राम नाम तुझको, भव पार लगाएगा ॥', thumbnailUrl: 'https://images.unsplash.com/photo-1698292102150-f3a743a152d1?q=80&w=2070&auto=format&fit=crop', thumbnailHint: 'ram worship', genre: 'भजन', teacher: 'संत परंपरा' },
 ];
 
 export const genres = [...new Set(videos.map(v => v.genre))];
@@ -59,3 +59,5 @@ export const schedule: Program[] = [
     { id: '22', time: '11:00 PM', title: 'KATHA D-LIVE', description: 'Late-night session of spiritual discourse.' },
     { id: '23', time: '11:30 PM', title: 'KATHA D-LIVE', description: 'Concluding part of the live spiritual discourse.' },
 ];
+
+    
