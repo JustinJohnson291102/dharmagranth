@@ -23,7 +23,7 @@ export const videos: Video[] = [
 
 export const hindiVideos: Video[] = [
   { id: 'h1', title: 'नाचे नन्दलाल, नचावे हरि की मईआ', description: 'नाचे नन्दलाल, नचावे हरि की मईआ ॥ नचावे हरि की मईआ...', thumbnailUrl: 'https://ik.imagekit.io/ggelm1lwa/0.jpg?updatedAt=1762513898737', thumbnailHint: 'krishna statue', genre: 'भजन', teacher: 'लोक कलाकार' },
-  { id: 'h2', title: 'यह तो प्रेम की बात है उधो', description: 'यह तो प्रेम की बात है उधो, बंदगी तेरे बस की नहीं है। यहाँ सर देके होते सौदे...', thumbnailUrl: 'https://images.unsplash.com/photo-1610212570415-470a1f4225a5?q=80&w=1934&auto=format&fit=crop', thumbnailHint: 'spiritual worship', genre: 'भजन', teacher: 'संत परंपरा' },
+  { id: 'h2', title: 'माई सबके बाल गोपाल, सदा खुशहाल रहे', description: 'माई सबके बाल गोपाल, सदा खुशहाल रहे, खुशहाल रहे मालामाल रहे, माईं सबके बाल गोपाल, सदा खुशहाल रहे ॥', thumbnailUrl: 'https://ik.imagekit.io/ggelm1lwa/0%20(6).jpg?updatedAt=1762515963741', thumbnailHint: 'child krishna', genre: 'भजन', teacher: 'संत परंपरा' },
   { id: 'h3', title: 'भए प्रगट कृपाला दीनदयाला', description: 'श्री रामअवतार स्तुति बधाई, सोहर, जन्मदिन अवसरों पर लोकप्रिय है। भए प्रगट कृपाला दीनदयाला, कौसल्या हितकारी ।', thumbnailUrl: 'https://ik.imagekit.io/ggelm1lwa/0%20(3).jpg?updatedAt=1762514460652', thumbnailHint: 'ram statue', genre: 'भजन', teacher: 'तुलसीदास' },
   { id: 'h4', title: 'राधा श्री राधा-धुन', description: 'राधा, श्री राधा, श्री राधा, श्री, राधा राधा ॥', thumbnailUrl: 'https://ik.imagekit.io/ggelm1lwa/0%20(1).jpg?updatedAt=1762514304105', thumbnailHint: 'radha krishna', genre: 'भजन', teacher: 'भक्तगण' },
   { id: 'h5', title: 'तुम्हारे हवाले अहोई मैया', description: 'तुम्हरे हवाले किया मैंने गौरी मैया, रखना तू इनका ख्याल माँ, रखा अहोई का व्रत मैंने विधिवत पूंजूँ, तोहे फैले फूले बाल गोपाल', thumbnailUrl: 'https://ik.imagekit.io/ggelm1lwa/0%20(2).jpg?updatedAt=1762514345981', thumbnailHint: 'hindu goddess', genre: 'अहोई अष्टमी भजन', teacher: 'महिला मंडली' },
@@ -59,5 +59,3 @@ export const schedule: Program[] = [
     { id: '22', time: '11:00 PM', title: 'KATHA D-LIVE', description: 'Late-night session of spiritual discourse.' },
     { id: '23', time: '11:30 PM', title: 'KATHA D-LIVE', description: 'Concluding part of the live spiritual discourse.' },
 ];
-
-    
