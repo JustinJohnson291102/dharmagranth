@@ -24,7 +24,7 @@ export const videos: Video[] = [
 export const hindiVideos: Video[] = [
   { id: 'h1', title: 'नाचे नन्दलाल, नचावे हरि की मईआ', description: 'नाचे नन्दलाल, नचावे हरि की मईआ ॥ नचावे हरि की मईआ...', thumbnailUrl: 'https://ik.imagekit.io/ggelm1lwa/0.jpg?updatedAt=1762513898737', thumbnailHint: 'krishna statue', genre: 'भजन', teacher: 'लोक कलाकार' },
   { id: 'h2', title: 'यह तो प्रेम की बात है उधो', description: 'यह तो प्रेम की बात है उधो, बंदगी तेरे बस की नहीं है। यहाँ सर देके होते सौदे...', thumbnailUrl: 'https://images.unsplash.com/photo-1610212570415-470a1f4225a5?q=80&w=1934&auto=format&fit=crop', thumbnailHint: 'spiritual worship', genre: 'भजन', teacher: 'संत परंपरा' },
-  { id: 'h3', title: 'भए प्रगट कृपाला दीनदयाला', description: 'श्री रामअवतार स्तुति बधाई, सोहर, जन्मदिन अवसरों पर लोकप्रिय है। भए प्रगट कृपाला दीनदयाला, कौसल्या हितकारी ।', thumbnailUrl: 'https://images.unsplash.com/photo-1595089304381-e28959d58852?q=80&w=1974&auto=format&fit=crop', thumbnailHint: 'ram statue', genre: 'भजन', teacher: 'तुलसीदास' },
+  { id: 'h3', title: 'भए प्रगट कृपाला दीनदयाला', description: 'श्री रामअवतार स्तुति बधाई, सोहर, जन्मदिन अवसरों पर लोकप्रिय है। भए प्रगट कृपाला दीनदयाला, कौसल्या हितकारी ।', thumbnailUrl: 'https://ik.imagekit.io/ggelm1lwa/0%20(3).jpg?updatedAt=1762514460652', thumbnailHint: 'ram statue', genre: 'भजन', teacher: 'तुलसीदास' },
   { id: 'h4', title: 'राधा श्री राधा-धुन', description: 'राधा, श्री राधा, श्री राधा, श्री, राधा राधा ॥', thumbnailUrl: 'https://ik.imagekit.io/ggelm1lwa/0%20(1).jpg?updatedAt=1762514304105', thumbnailHint: 'radha krishna', genre: 'भजन', teacher: 'भक्तगण' },
   { id: 'h5', title: 'तुम्हारे हवाले अहोई मैया', description: 'तुम्हरे हवाले किया मैंने गौरी मैया, रखना तू इनका ख्याल माँ, रखा अहोई का व्रत मैंने विधिवत पूंजूँ, तोहे फैले फूले बाल गोपाल', thumbnailUrl: 'https://ik.imagekit.io/ggelm1lwa/0%20(2).jpg?updatedAt=1762514345981', thumbnailHint: 'hindu goddess', genre: 'अहोई अष्टमी भजन', teacher: 'महिला मंडली' },
   { id: 'h6', title: 'बजरंग बाण', description: 'निश्चय प्रेम प्रतीति ते, बिनय करैं सनमान। तेहि के कारज सकल शुभ, सिद्ध करैं हनुमान॥', thumbnailUrl: 'https://images.unsplash.com/photo-1680872844802-34a6ed7a2e2b?q=80&w=1964&auto=format&fit=crop', thumbnailHint: 'hanuman statue', genre: 'भजन', teacher: 'संत परंपरा' },
@@ -41,7 +41,7 @@ export const schedule: Program[] = [
     { id: '4', time: '07:00 AM', title: 'KHATU SHYAM JI D-LIVE AARTI', description: 'Direct telecast of the aarti from Khatu Shyam Ji temple.' },
     { id: '5', time: '07:30 AM', title: 'BHAJAN CHALISA', description: 'A collection of powerful bhajans and chalisas.' },
     { id: '6', time: '08:00 AM', title: 'BHAJAN CHALISA', description: 'Continued session of devotional hymns.' },
-    { id: '7', time: '09:00 AM', title: 'JHANDEWALAN MATA LIVE AARTI', description: 'Witness the grand aarti live from Jhandewalan Mata Mandir.' },
+    { id: '7', time: '09:00 AM', title: 'JHANDEWALAN MATA LIVE AARTi', description: 'Witness the grand aarti live from Jhandewalan Mata Mandir.' },
     { id: '8', time: '10:30 AM', title: 'KATHA D-LIVE', description: 'Live spiritual discourse from revered saints.' },
     { id: '9', time: '12:00 PM', title: 'JHANDEWALAN MATA LIVE AARTI', description: 'Mid-day aarti live from Jhandewalan Mata Mandir.' },
     { id: '10', time: '03:00 PM', title: 'KAVI SAMMELAN', description: 'An enriching session of devotional poetry.' },
@@ -59,5 +59,3 @@ export const schedule: Program[] = [
     { id: '22', time: '11:00 PM', title: 'KATHA D-LIVE', description: 'Late-night session of spiritual discourse.' },
     { id: '23', time: '11:30 PM', title: 'KATHA D-LIVE', description: 'Concluding part of the live spiritual discourse.' },
 ];
-
-    
