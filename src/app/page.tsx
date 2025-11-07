@@ -159,7 +159,7 @@ export default function Home() {
               Explore a selection of our most popular discourses, guided meditations, and cultural programs.
             </p>
           </div>
-          <div className="space-y-16 animate-fade-in-up">
+          <div className="space-y-8 animate-fade-in-up">
             {hindiVideos.map((video, index) => (
               <Card key={index} className="overflow-hidden shadow-lg transition-all hover:shadow-xl w-full max-w-4xl mx-auto">
                 <div className="grid md:grid-cols-2 items-center">
@@ -168,7 +168,7 @@ export default function Home() {
                       src={video.thumbnailUrl}
                       alt={video.title}
                       fill
-                      className="object-cover"
+                      className="object-fill"
                       data-ai-hint={video.thumbnailHint}
                     />
                      <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
@@ -246,7 +246,7 @@ export default function Home() {
               {scheduleCarouselImages.map((src, index) => (
                 <CarouselItem key={index} className="pl-1 basis-full">
                   <div className="p-1">
-                    <div className="relative h-[120vh]">
+                    <div className="relative h-[240vh]">
                       <Image
                         src={src}
                         alt={`Schedule image ${index + 1}`}
