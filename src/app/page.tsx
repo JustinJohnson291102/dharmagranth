@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { videos, schedule, hindiVideos } from '@/lib/data';
-import { ArrowRight, PlayCircle, Calendar, Mic2, BookOpen } from 'lucide-react';
+import { ArrowRight, PlayCircle, Calendar, Mic2, BookOpen, Tv, Quote } from 'lucide-react';
 import {
   Carousel,
   CarouselContent,
@@ -23,7 +23,7 @@ import Autoplay from "embla-carousel-autoplay"
 
 const ourPrograms = [
     { id: '1', title: 'Hinduism Teachings', description: 'Explore the vast wisdom of Sanatana Dharma.', imageUrl: 'https://plus.unsplash.com/premium_photo-1675601485116-b083859583b2?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1974', imageHint: 'hinduism temple', genre: 'Hinduism', teacher: 'Scholars' },
-    { id: '2', title: 'Buddhist Philosophy', description: 'Find peace through the teachings of the Buddha.', imageUrl: 'https://images.unsplash.com/photo-1549167008-dce1759943b9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1974', imageHint: 'buddhist statue', genre: 'Buddhism', teacher: 'Masters' },
+    { id: '2', title: 'Buddhist Philosophy', description: 'Find peace through the teachings of the Buddha.', imageUrl: 'https://images.unsplash.com/photo-1549167008-dce1759943b9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%\u003d\u003d&auto=format&fit=crop&q=80&w=1974', imageHint: 'buddhist statue', genre: 'Buddhism', teacher: 'Masters' },
     { id: '3', title: 'Jainism Principles', description: 'Learn about Ahimsa and non-violence.', imageUrl: 'https://media.istockphoto.com/id/494243298/photo/jain-temple-mahavira-in-jaisalmer-india.jpg?s=1024x1024&w=is&k=20&c=ysr4OAZ-yCc4l6cHpLMXB-0T10PKzIxYUOoM6fKxosU=', imageHint: 'jainism symbol', genre: 'Jainism', teacher: 'Gurus' },
     { id: '4', title: 'Sikhism Values', description: 'Discover the principles of selfless service and equality.', imageUrl: 'https://images.unsplash.com/photo-1582512403322-a73c407c0303?q=80&w=2070&auto=format&fit=crop', imageHint: 'golden temple', genre: 'Sikhism', teacher: 'Community' },
     { id: '5', title: 'Interfaith Dialogue', description: 'Exploring the common ground between spiritual paths.', imageUrl: 'https://plus.unsplash.com/premium_photo-1736961713901-63076826b437?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=871', imageHint: 'religious books', genre: 'Interfaith', teacher: 'Various' }
@@ -60,7 +60,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-[100dvh] bg-background">
-      <section className="relative w-full h-[70vh] md:h-[90vh]">
+      <section className="relative w-full h-[60vh] md:h-[80vh]">
         <Image
             src="https://ik.imagekit.io/ggelm1lwa/dharmgranthtv.jpeg?updatedAt=1761734926711"
             alt="A collage representing various aspects of dharmic traditions."
@@ -70,14 +70,8 @@ export default function Home() {
             data-ai-hint="dharmic collage"
           />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
-        <div className="absolute inset-0 flex items-center justify-center text-center text-white">
+        <div className="absolute inset-0 flex items-end justify-center pb-20 text-center text-white">
           <div className="animate-fade-in-up space-y-4">
-              <h1 className="text-4xl md:text-7xl font-headline font-bold text-glow">
-                Spiritual Wisdom for the Modern World
-              </h1>
-              <p className="mt-4 text-lg md:text-xl text-white/80 max-w-3xl mx-auto">
-                Promoting dharmic values and teachings through spiritual media for a peaceful and enlightened life.
-              </p>
               <div className="mt-8 flex justify-center gap-4">
                 <Button asChild size="lg">
                   <Link href="/live">
@@ -92,8 +86,22 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="w-full py-16 md:py-24 bg-pattern-light">
+         <div className="container px-4 md:px-6">
+            <div className="text-center max-w-4xl mx-auto animate-fade-in-up">
+                <Quote className="h-12 w-12 text-primary mx-auto mb-4" />
+                <h1 className="text-4xl md:text-5xl font-headline font-bold text-glow mb-6">
+                    Spiritual Wisdom for the Modern World
+                </h1>
+                <p className="text-lg md:text-xl text-muted-foreground">
+                    Promoting dharmic values and teachings through spiritual media for a peaceful and enlightened life.
+                </p>
+            </div>
+         </div>
+      </section>
+
       
-      <section className="w-full py-16 md:py-24 bg-gradient-to-b from-background to-secondary">
+      <section className="w-full py-16 md:py-24 bg-gradient-to-b from-secondary/50 to-background">
         <div className="container px-4 md:px-6">
           <div className="mb-16 text-center animate-fade-in-up">
             <h2 className="text-4xl font-headline font-bold tracking-tight sm:text-5xl mb-4">Our Programs</h2>
@@ -104,7 +112,7 @@ export default function Home() {
           <Carousel opts={{ align: "start", loop: true }} className="w-full animate-fade-in-up" style={{animationDelay: '0.2s'}}>
             <CarouselContent className="-ml-4">
               {ourPrograms.map((program) => (
-                <CarouselItem key={program.id} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                <CarouselItem key={program.id} className="pl-4 md:basis-1/2 lg:basis-[28%]">
                   <div className="p-1 h-full">
                       <VideoCard video={{
                         id: program.id,
@@ -114,7 +122,7 @@ export default function Home() {
                         thumbnailHint: program.imageHint,
                         genre: program.genre,
                         teacher: program.teacher,
-                      }} />
+                      }} className="w-full h-full" imageClassName="object-fill" />
                   </div>
                 </CarouselItem>
               ))}
@@ -151,7 +159,7 @@ export default function Home() {
         </Carousel>
       </section>
 
-      <section className="w-full py-16 md:py-24 bg-background">
+      <section className="w-full py-16 md:py-24 bg-background bg-pattern-dark">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center mb-16 animate-fade-in-up">
             <h2 className="text-4xl font-headline font-bold tracking-tight sm:text-5xl">Featured Videos</h2>
@@ -159,26 +167,26 @@ export default function Home() {
               Explore a selection of our most popular discourses, guided meditations, and cultural programs.
             </p>
           </div>
-          <div className="space-y-12 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+          <div className="space-y-8 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
             {hindiVideos.map((video, index) => (
-              <Card key={index} className="overflow-hidden shadow-lg transition-all hover:shadow-xl w-full max-w-4xl mx-auto border-transparent hover:border-primary/50 border">
+              <Card key={index} className="overflow-hidden shadow-lg transition-all hover:shadow-primary/20 w-full max-w-4xl mx-auto border-transparent hover:border-primary/20 border-2 bg-card/80 backdrop-blur-sm group">
                 <div className="grid md:grid-cols-2 items-center">
                   <div className="relative aspect-video">
                     <Image 
                       src={video.thumbnailUrl}
                       alt={video.title}
                       fill
-                      className="object-cover"
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
                       data-ai-hint={video.thumbnailHint}
                     />
-                     <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
+                     <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                         <PlayCircle className="h-16 w-16 text-white/80" />
                     </div>
                   </div>
                   <div className="p-6 flex flex-col justify-center">
                     <Badge variant="secondary" className="w-fit mb-4">{video.genre}</Badge>
-                    <h3 className="text-2xl font-headline font-bold mb-2">{video.title}</h3>
-                    <p className="text-muted-foreground">{video.description}</p>
+                    <h3 className="text-xl font-headline font-bold mb-2 group-hover:text-primary transition-colors">{video.title}</h3>
+                    <p className="text-muted-foreground text-sm">{video.description}</p>
                   </div>
                 </div>
               </Card>
@@ -197,7 +205,9 @@ export default function Home() {
       <section className="w-full py-16 md:py-24 bg-secondary/70">
         <div className="container grid items-center gap-12 px-4 md:px-6 lg:grid-cols-2">
             <div className="space-y-6 animate-fade-in-up">
-                <Badge variant="outline" className="text-base py-1 px-3">Upcoming Programs</Badge>
+                <Badge variant="outline" className="text-base py-2 px-4 rounded-lg border-primary/50 bg-primary/10 text-primary mb-4">
+                  <Tv className="mr-2 h-5 w-5" /> Upcoming Programs
+                </Badge>
                 <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-4xl md:text-5xl flex items-center gap-3">
                 <Calendar className="h-10 w-10 text-primary" />
                 Tune In to Our Daily Schedule
@@ -215,14 +225,14 @@ export default function Home() {
             <div className="space-y-6 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
                 <div className="flex flex-col gap-4 mt-6">
                 {upcomingPrograms.map(program => (
-                <Card key={program.id} className="transition-all hover:shadow-lg bg-background/80 backdrop-blur-sm border-border hover:border-primary/30">
+                <Card key={program.id} className="transition-all hover:shadow-lg bg-background/80 backdrop-blur-sm border-border hover:border-primary/30 group">
                     <CardContent className="p-4 flex items-center gap-4">
-                    <div className="bg-primary/10 text-primary p-3 rounded-lg flex flex-col items-center justify-center aspect-square w-24 text-center">
+                    <div className="bg-primary/10 text-primary p-3 rounded-lg flex flex-col items-center justify-center aspect-square w-24 text-center transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
                         <span className="text-lg font-semibold">{program.time.split(' ')[1]}</span>
                         <span className="text-3xl font-bold tracking-tighter">{program.time.split(' ')[0]}</span>
                     </div>
                     <div>
-                        <h3 className="text-lg font-headline font-semibold">{program.title}</h3>
+                        <h3 className="text-lg font-headline font-semibold group-hover:text-primary transition-colors">{program.title}</h3>
                         <p className="text-sm text-muted-foreground">{program.description}</p>
                     </div>
                     </CardContent>
@@ -274,3 +284,5 @@ export default function Home() {
     </div>
   );
 }
+
+    

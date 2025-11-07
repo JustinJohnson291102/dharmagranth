@@ -59,3 +59,5 @@ export const schedule: Program[] = [
     { id: '22', time: '11:00 PM', title: 'KATHA D-LIVE', description: 'Late-night session of spiritual discourse.' },
     { id: '23', time: '11:30 PM', title: 'KATHA D-LIVE', description: 'Concluding part of the live spiritual discourse.' },
 ];
+
+    
