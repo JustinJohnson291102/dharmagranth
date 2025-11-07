@@ -48,6 +48,7 @@ const movingCarouselImages = [
 ];
 
 const scheduleCarouselImages = [
+  'https://ik.imagekit.io/ggelm1lwa/dharmgranthtv.jpeg?updatedAt=1761734926711',
   'https://ik.imagekit.io/ggelm1lwa/Screenshot%20(107).png?updatedAt=1762260925332',
   'https://ik.imagekit.io/ggelm1lwa/Screenshot%20(105).png?updatedAt=1762260926261',
   'https://ik.imagekit.io/ggelm1lwa/Screenshot%20(106).png?updatedAt=1762260925955',
@@ -60,19 +61,25 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-[100dvh] bg-background">
-      <section className="relative w-full h-[60vh] md:h-[80vh]">
+      <section className="relative w-full h-[70vh] md:h-[90vh] flex items-center justify-center text-center text-white">
         <Image
-            src="https://ik.imagekit.io/ggelm1lwa/dharmgranthtv.jpeg?updatedAt=1761734926711"
-            alt="A collage representing various aspects of dharmic traditions."
+            src="https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?q=80&w=2053&auto=format&fit=crop"
+            alt="A spiritual teacher giving a discourse in a serene setting."
             fill
-            className="object-fill"
+            className="object-cover"
             priority
-            data-ai-hint="dharmic collage"
+            data-ai-hint="spiritual teacher"
           />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
-        <div className="absolute inset-0 flex items-end justify-center pb-20 text-center text-white">
-          <div className="animate-fade-in-up space-y-4">
-              <div className="mt-8 flex justify-center gap-4">
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative z-10 animate-fade-in-up space-y-6 max-w-4xl mx-auto px-4">
+              <Quote className="h-16 w-16 text-primary mx-auto" />
+              <h1 className="text-4xl md:text-6xl font-headline font-bold text-glow">
+                  Spiritual Wisdom for the Modern World
+              </h1>
+              <p className="text-lg md:text-xl text-white/90">
+                  Promoting dharmic values and teachings through spiritual media for a peaceful and enlightened life.
+              </p>
+              <div className="mt-8 flex flex-wrap justify-center gap-4">
                 <Button asChild size="lg">
                   <Link href="/live">
                     <PlayCircle className="mr-2" /> Watch Live
@@ -83,24 +90,8 @@ export default function Home() {
                 </Button>
               </div>
           </div>
-        </div>
       </section>
 
-      <section className="w-full py-16 md:py-24 bg-pattern-light">
-         <div className="container px-4 md:px-6">
-            <div className="text-center max-w-4xl mx-auto animate-fade-in-up">
-                <Quote className="h-12 w-12 text-primary mx-auto mb-4" />
-                <h1 className="text-4xl md:text-5xl font-headline font-bold text-glow mb-6">
-                    Spiritual Wisdom for the Modern World
-                </h1>
-                <p className="text-lg md:text-xl text-muted-foreground">
-                    Promoting dharmic values and teachings through spiritual media for a peaceful and enlightened life.
-                </p>
-            </div>
-         </div>
-      </section>
-
-      
       <section className="w-full py-16 md:py-24 bg-gradient-to-b from-secondary/50 to-background">
         <div className="container px-4 md:px-6">
           <div className="mb-16 text-center animate-fade-in-up">
@@ -284,3 +275,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
