@@ -63,7 +63,7 @@ export default function Home() {
     <div className="flex flex-col min-h-[100dvh] bg-background">
       <section className="relative w-full h-[70vh] md:h-[90vh] flex items-center justify-center text-center text-white">
         <Image
-            src="https://images.unsplash.com/photo-1583003328230-6a58849f402c?q=80&w=2070&auto=format&fit=crop"
+            src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?q=80&w=2071&auto=format&fit=crop"
             alt="A spiritual teacher giving a discourse in a serene setting."
             fill
             className="object-fill"
