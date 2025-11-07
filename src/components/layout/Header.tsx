@@ -30,7 +30,7 @@ export default function Header() {
       <div className="container flex h-20 items-center">
         <div className="flex items-center mr-auto">
           <Link href="/" className="flex items-center gap-2">
-            <Logo className="h-12 w-12" />
+            <Logo className="h-14 w-14" />
             <span className="font-headline font-bold text-xl hidden sm:inline-block">Dharmagranth TV</span>
           </Link>
         </div>
@@ -71,7 +71,7 @@ export default function Header() {
                 <div className="flex flex-col gap-2">
                     {mobileNavLinks.map((link) => (
                         <MobileNavLink key={link.href} href={link.href} onSelect={() => setIsOpen(false)}>
-                            <link.icon className="h-5 w-5" />
+                            <link.icon className="h-5 w-5 text-primary" />
                             {link.label}
                         </MobileNavLink>
                     ))}

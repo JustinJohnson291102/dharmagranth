@@ -59,53 +59,53 @@ export default function Home() {
   const autoplay = React.useRef(Autoplay({ delay: 2000, stopOnInteraction: false, playOnInit: true, stopOnMouseEnter: true }));
 
   return (
-    <div className="flex flex-col min-h-[100dvh]">
-      <section className="relative w-full h-[100vh]">
+    <div className="flex flex-col min-h-[100dvh] bg-background">
+      <section className="relative w-full h-[70vh] md:h-[90vh]">
         <Image
             src="https://ik.imagekit.io/ggelm1lwa/dharmgranthtv.jpeg?updatedAt=1761734926711"
             alt="A collage representing various aspects of dharmic traditions."
             fill
-            className="object-fill"
+            className="object-cover"
             priority
             data-ai-hint="dharmic collage"
           />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-      </section>
-
-      <section className="w-full py-12 md:py-20 lg:py-24 bg-background">
-        <div className="container text-center animate-fade-in-up">
-            <h1 className="text-4xl md:text-6xl font-headline font-bold text-foreground">
-              Spiritual Wisdom for the Modern World
-            </h1>
-            <p className="mt-4 text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-              Promoting dharmic values and teachings through spiritual media for a peaceful and enlightened life.
-            </p>
-            <div className="mt-8 flex justify-center gap-4">
-              <Button asChild size="lg">
-                <Link href="/live">
-                  <PlayCircle className="mr-2" /> Watch Live
-                </Link>
-              </Button>
-              <Button asChild size="lg" variant="secondary">
-                <Link href="/videos">Explore Videos</Link>
-              </Button>
-            </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
+        <div className="absolute inset-0 flex items-center justify-center text-center text-white">
+          <div className="animate-fade-in-up space-y-4">
+              <h1 className="text-4xl md:text-7xl font-headline font-bold text-glow">
+                Spiritual Wisdom for the Modern World
+              </h1>
+              <p className="mt-4 text-lg md:text-xl text-white/80 max-w-3xl mx-auto">
+                Promoting dharmic values and teachings through spiritual media for a peaceful and enlightened life.
+              </p>
+              <div className="mt-8 flex justify-center gap-4">
+                <Button asChild size="lg">
+                  <Link href="/live">
+                    <PlayCircle className="mr-2" /> Watch Live
+                  </Link>
+                </Button>
+                <Button asChild size="lg" variant="secondary">
+                  <Link href="/videos">Explore Videos</Link>
+                </Button>
+              </div>
+          </div>
         </div>
       </section>
+
       
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-secondary">
+      <section className="w-full py-16 md:py-24 bg-gradient-to-b from-background to-secondary">
         <div className="container px-4 md:px-6">
-          <div className="mb-12 text-center animate-fade-in-up">
-            <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-5xl mb-4">Our Programs</h2>
-             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed mx-auto">
+          <div className="mb-16 text-center animate-fade-in-up">
+            <h2 className="text-4xl font-headline font-bold tracking-tight sm:text-5xl mb-4">Our Programs</h2>
+             <p className="max-w-3xl text-muted-foreground md:text-xl mx-auto">
               A diverse range of programs dedicated to spiritual learning and cultural enrichment.
             </p>
           </div>
-          <Carousel opts={{ align: "start", loop: true }} className="w-full animate-fade-in-up mb-16">
-            <CarouselContent className="-ml-1">
+          <Carousel opts={{ align: "start", loop: true }} className="w-full animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+            <CarouselContent className="-ml-4">
               {ourPrograms.map((program) => (
-                <CarouselItem key={program.id} className="pl-1 md:basis-1/3 lg:basis-1/4">
-                  <div className="p-1 h-full w-[75%] mx-auto">
+                <CarouselItem key={program.id} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1 h-full">
                       <VideoCard video={{
                         id: program.id,
                         title: program.title,
@@ -130,18 +130,18 @@ export default function Home() {
             align: "start",
             loop: true,
           }}
-          className="w-full"
+          className="w-full mt-24"
         >
           <CarouselContent className="-ml-1">
             {movingCarouselImages.map((src, index) => (
               <CarouselItem key={index} className="pl-1 basis-full">
                 <div className="p-1">
-                  <div className="relative h-[100vh]">
+                  <div className="relative h-[60vh] md:h-[80vh]">
                     <Image
                       src={src}
                       alt={`Carousel image ${index + 1}`}
                       fill
-                      className="object-fill"
+                      className="object-cover rounded-lg"
                     />
                   </div>
                 </div>
@@ -151,24 +151,24 @@ export default function Home() {
         </Carousel>
       </section>
 
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-card">
+      <section className="w-full py-16 md:py-24 bg-background">
         <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12 animate-fade-in-up">
-            <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-5xl">Featured Videos</h2>
-            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center mb-16 animate-fade-in-up">
+            <h2 className="text-4xl font-headline font-bold tracking-tight sm:text-5xl">Featured Videos</h2>
+            <p className="max-w-3xl text-muted-foreground md:text-xl">
               Explore a selection of our most popular discourses, guided meditations, and cultural programs.
             </p>
           </div>
-          <div className="space-y-8 animate-fade-in-up">
+          <div className="space-y-12 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
             {hindiVideos.map((video, index) => (
-              <Card key={index} className="overflow-hidden shadow-lg transition-all hover:shadow-xl w-full max-w-4xl mx-auto">
+              <Card key={index} className="overflow-hidden shadow-lg transition-all hover:shadow-xl w-full max-w-4xl mx-auto border-transparent hover:border-primary/50 border">
                 <div className="grid md:grid-cols-2 items-center">
                   <div className="relative aspect-video">
                     <Image 
                       src={video.thumbnailUrl}
                       alt={video.title}
                       fill
-                      className="object-fill"
+                      className="object-cover"
                       data-ai-hint={video.thumbnailHint}
                     />
                      <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity">
@@ -176,7 +176,7 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="p-6 flex flex-col justify-center">
-                    <Badge variant="secondary" className="w-fit mb-2">{video.genre}</Badge>
+                    <Badge variant="secondary" className="w-fit mb-4">{video.genre}</Badge>
                     <h3 className="text-2xl font-headline font-bold mb-2">{video.title}</h3>
                     <p className="text-muted-foreground">{video.description}</p>
                   </div>
@@ -184,8 +184,8 @@ export default function Home() {
               </Card>
             ))}
           </div>
-          <div className="text-center mt-12 animate-fade-in-up">
-            <Button asChild>
+          <div className="text-center mt-16 animate-fade-in-up">
+            <Button asChild size="lg">
               <Link href="/videos">
                 View All Videos <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
@@ -194,15 +194,15 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full py-4 md:py-6 bg-secondary">
+      <section className="w-full py-16 md:py-24 bg-secondary/70">
         <div className="container grid items-center gap-12 px-4 md:px-6 lg:grid-cols-2">
-            <div className="space-y-4 animate-fade-in-up">
-                <Badge variant="outline">Upcoming Programs</Badge>
+            <div className="space-y-6 animate-fade-in-up">
+                <Badge variant="outline" className="text-base py-1 px-3">Upcoming Programs</Badge>
                 <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-4xl md:text-5xl flex items-center gap-3">
-                <Calendar className="h-8 w-8" />
+                <Calendar className="h-10 w-10 text-primary" />
                 Tune In to Our Daily Schedule
                 </h2>
-                <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                <p className="max-w-[600px] text-muted-foreground md:text-xl">
                 From morning chants to evening discourses, our programming is designed to guide and inspire you throughout your day.
                 </p>
                 <Button asChild size="lg" className="mt-6">
@@ -212,14 +212,14 @@ export default function Home() {
                 </Link>
                 </Button>
             </div>
-            <div className="space-y-4 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+            <div className="space-y-6 animate-fade-in-up" style={{animationDelay: '0.2s'}}>
                 <div className="flex flex-col gap-4 mt-6">
                 {upcomingPrograms.map(program => (
-                <Card key={program.id} className="transition-all hover:shadow-md bg-background/50 backdrop-blur-sm border-border">
+                <Card key={program.id} className="transition-all hover:shadow-lg bg-background/80 backdrop-blur-sm border-border hover:border-primary/30">
                     <CardContent className="p-4 flex items-center gap-4">
-                    <div className="bg-primary/10 text-primary p-3 rounded-lg flex flex-col items-center justify-center aspect-square w-20">
-                        <span className="text-sm font-semibold">{program.time.split(' ')[1]}</span>
-                        <span className="text-2xl font-bold tracking-tighter">{program.time.split(' ')[0]}</span>
+                    <div className="bg-primary/10 text-primary p-3 rounded-lg flex flex-col items-center justify-center aspect-square w-24 text-center">
+                        <span className="text-lg font-semibold">{program.time.split(' ')[1]}</span>
+                        <span className="text-3xl font-bold tracking-tighter">{program.time.split(' ')[0]}</span>
                     </div>
                     <div>
                         <h3 className="text-lg font-headline font-semibold">{program.title}</h3>
@@ -246,12 +246,12 @@ export default function Home() {
               {scheduleCarouselImages.map((src, index) => (
                 <CarouselItem key={index} className="pl-1 basis-full">
                   <div className="p-1">
-                    <div className="relative h-[240vh]">
+                    <div className="relative h-[80vh] md:h-[120vh]">
                       <Image
                         src={src}
                         alt={`Schedule image ${index + 1}`}
                         fill
-                        className="object-fill"
+                        className="object-cover rounded-lg"
                       />
                     </div>
                   </div>
@@ -261,10 +261,10 @@ export default function Home() {
           </Carousel>
       </section>
 
-      <section className="w-full py-12 md:py-20 border-y bg-background">
-        <div className="container space-y-8 animate-fade-in-up">
+      <section className="w-full py-16 md:py-24 border-y bg-background">
+        <div className="container space-y-12 animate-fade-in-up">
             <div className="text-center">
-              <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-4xl">
+              <h2 className="text-4xl font-headline font-bold tracking-tight sm:text-5xl">
                 Dharmagranth TV Available On
               </h2>
             </div>
@@ -274,9 +274,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
-
-    
-
-    

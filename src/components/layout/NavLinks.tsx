@@ -14,7 +14,7 @@ const navLinks = [
 ];
 
 const NavLink = ({ href, children, className }: { href: string; children: React.ReactNode, className?: string }) => (
-  <Link href={href} className={cn("text-lg font-medium text-foreground/80 transition-colors hover:text-foreground", className)}>
+  <Link href={href} className={cn("relative text-lg font-medium text-foreground/70 transition-colors hover:text-foreground", className)}>
     {children}
   </Link>
 );
@@ -29,7 +29,7 @@ export default function NavLinks() {
         <NavLink
           key={link.href}
           href={link.href}
-          className={cn(pathname === link.href ? "text-foreground" : "")}
+          className={cn(pathname === link.href && "text-primary font-semibold after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-primary after:left-0 after:bottom-[-4px]")}
         >
           {link.label}
         </NavLink>
