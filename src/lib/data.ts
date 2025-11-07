@@ -28,7 +28,7 @@ export const hindiVideos: Video[] = [
   { id: 'h4', title: 'राधा श्री राधा-धुन', description: 'राधा, श्री राधा, श्री राधा, श्री, राधा राधा ॥', thumbnailUrl: 'https://ik.imagekit.io/ggelm1lwa/0%20(1).jpg?updatedAt=1762514304105', thumbnailHint: 'radha krishna', genre: 'भजन', teacher: 'भक्तगण' },
   { id: 'h5', title: 'तुम्हारे हवाले अहोई मैया', description: 'तुम्हरे हवाले किया मैंने गौरी मैया, रखना तू इनका ख्याल माँ, रखा अहोई का व्रत मैंने विधिवत पूंजूँ, तोहे फैले फूले बाल गोपाल', thumbnailUrl: 'https://ik.imagekit.io/ggelm1lwa/0%20(2).jpg?updatedAt=1762514345981', thumbnailHint: 'hindu goddess', genre: 'अहोई अष्टमी भजन', teacher: 'महिला मंडली' },
   { id: 'h6', title: 'अच्चुतम केशवं कृष्ण दामोदरं', description: 'अच्चुतम केशवं कृष्ण दामोदरं, राम नारायणं जानकी बल्लभम । कौन कहता हे भगवान आते नहीं..', thumbnailUrl: 'https://ik.imagekit.io/ggelm1lwa/0%20(4).jpg?updatedAt=1762514851503', thumbnailHint: 'krishna statue', genre: 'भजन', teacher: 'संत परंपरा' },
-  { id: 'h7', title: 'प्रभु राम का सुमिरन कर', description: 'प्रभु राम का सुमिरन कर, हर दुःख मिट जाएगा, यही राम नाम तुझको, भव पार लगाएगा ॥', thumbnailUrl: 'https://images.unsplash.com/photo-1698292102150-f3a743a152d1?q=80&w=2070&auto=format&fit=crop', thumbnailHint: 'ram worship', genre: 'भजन', teacher: 'संत परंपरा' },
+  { id: 'h7', title: 'प्रभु राम का सुमिरन कर', description: 'प्रभु राम का सुमिरन कर, हर दुःख मिट जाएगा, यही राम नाम तुझको, भव पार लगाएगा ॥', thumbnailUrl: 'https://ik.imagekit.io/ggelm1lwa/0%20(5).jpg?updatedAt=1762515090023', thumbnailHint: 'ram worship', genre: 'भजन', teacher: 'संत परंपरा' },
 ];
 
 export const genres = [...new Set(videos.map(v => v.genre))];
