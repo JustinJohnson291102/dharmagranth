@@ -22,7 +22,7 @@ export const videos: Video[] = [
 ];
 
 export const hindiVideos: Video[] = [
-  { id: 'h1', title: 'नाचे नन्दलाल, नचावे हरि की मईआ', description: 'नाचे नन्दलाल, नचावे हरि की मईआ ॥ नचावे हरि की मईआ...', thumbnailUrl: 'https://images.unsplash.com/photo-1605043536035-64f34563b789?q=80&w=2070&auto=format&fit=crop', thumbnailHint: 'krishna statue', genre: 'भजन', teacher: 'लोक कलाकार' },
+  { id: 'h1', title: 'नाचे नन्दलाल, नचावे हरि की मईआ', description: 'नाचे नन्दलाल, नचावे हरि की मईआ ॥ नचावे हरि की मईआ...', thumbnailUrl: 'https://ik.imagekit.io/ggelm1lwa/0.jpg?updatedAt=1762513898737', thumbnailHint: 'krishna statue', genre: 'भजन', teacher: 'लोक कलाकार' },
   { id: 'h2', title: 'यह तो प्रेम की बात है उधो', description: 'यह तो प्रेम की बात है उधो, बंदगी तेरे बस की नहीं है। यहाँ सर देके होते सौदे...', thumbnailUrl: 'https://images.unsplash.com/photo-1610212570415-470a1f4225a5?q=80&w=1934&auto=format&fit=crop', thumbnailHint: 'spiritual worship', genre: 'भजन', teacher: 'संत परंपरा' },
   { id: 'h3', title: 'भए प्रगट कृपाला दीनदयाला', description: 'श्री रामअवतार स्तुति बधाई, सोहर, जन्मदिन अवसरों पर लोकप्रिय है। भए प्रगट कृपाला दीनदयाला, कौसल्या हितकारी ।', thumbnailUrl: 'https://images.unsplash.com/photo-1595089304381-e28959d58852?q=80&w=1974&auto=format&fit=crop', thumbnailHint: 'ram statue', genre: 'भजन', teacher: 'तुलसीदास' },
   { id: 'h4', title: 'राधा श्री राधा-धुन', description: 'राधा, श्री राधा, श्री राधा, श्री, राधा राधा ॥', thumbnailUrl: 'https://images.unsplash.com/photo-1649615024732-353db0425a8e?q=80&w=1974&auto=format&fit=crop', thumbnailHint: 'radha krishna', genre: 'भजन', teacher: 'भक्तगण' },
