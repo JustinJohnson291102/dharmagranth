@@ -202,7 +202,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full py-16 md:py-24 bg-secondary/70">
+      <section className="w-full pt-8 pb-16 md:pt-12 md:pb-24 bg-secondary/70">
         <div className="container grid items-center gap-12 px-4 md:px-6 lg:grid-cols-2">
             <div className="space-y-6 animate-fade-in-up">
                 <Badge variant="outline" className="text-base py-2 px-4 rounded-lg border-primary/50 bg-primary/10 text-primary mb-4">
