@@ -9,7 +9,7 @@ export default function Logo({ className, ...props }: React.HTMLAttributes<HTMLD
         alt="Dharmagranth TV Logo"
         fill
         sizes="64px"
-        className="object-fill"
+        className="object-cover"
       />
     </div>
   );

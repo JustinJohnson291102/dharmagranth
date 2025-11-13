@@ -120,7 +120,7 @@ function VideoListCard({ video }: { video: Video }) {
                         alt={video.title}
                         fill
                         sizes="(max-width: 640px) 100vw, 33vw"
-                        className="object-fill"
+                        className="object-cover"
                         data-ai-hint={video.thumbnailHint}
                     />
                 </div>

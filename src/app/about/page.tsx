@@ -31,7 +31,7 @@ export default function AboutPage() {
               alt="Dharmagranth TV Logo"
               width={400}
               height={400}
-              className="w-full max-w-sm h-auto object-fill"
+              className="w-full max-w-sm h-auto object-cover"
             />
           </div>
         </div>
@@ -43,7 +43,7 @@ export default function AboutPage() {
                 alt="Our Vision"
                 width={400}
                 height={400}
-                className="w-full max-w-xs h-auto object-fill"
+                className="w-full max-w-xs h-auto object-cover"
                 />
             </div>
             <div>
@@ -105,7 +105,7 @@ export default function AboutPage() {
                 {teamMembers.map((member, index) => (
                     <div key={index} className="flex flex-col items-center gap-4">
                         <Avatar className="h-24 w-24 border-4 border-primary/20">
-                            <AvatarImage src={member.avatar} alt={member.name} className="object-fill" />
+                            <AvatarImage src={member.avatar} alt={member.name} className="object-cover" />
                             <AvatarFallback>{member.fallback}</AvatarFallback>
                         </Avatar>
                         <div>

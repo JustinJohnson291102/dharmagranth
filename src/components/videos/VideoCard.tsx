@@ -22,7 +22,7 @@ export default function VideoCard({ video, className, imageClassName }: VideoCar
             alt={video.title}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            className={cn("object-fill transition-transform duration-500 group-hover:scale-110", imageClassName)}
+            className={cn("object-cover transition-transform duration-500 group-hover:scale-110", imageClassName)}
             data-ai-hint={video.thumbnailHint}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end justify-start p-4">

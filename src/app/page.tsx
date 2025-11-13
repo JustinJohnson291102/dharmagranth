@@ -66,7 +66,7 @@ export default function Home() {
             src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2120&auto=format&fit=crop"
             alt="A person doing yoga at sunset."
             fill
-            className="object-fill"
+            className="object-cover"
             priority
             data-ai-hint="yoga sunset"
           />
@@ -140,7 +140,7 @@ export default function Home() {
                       src={src}
                       alt={`Carousel image ${index + 1}`}
                       fill
-                      className="object-fill rounded-lg"
+                      className="object-cover rounded-lg"
                     />
                   </div>
                 </div>
@@ -167,7 +167,7 @@ export default function Home() {
                       src={video.thumbnailUrl}
                       alt={video.title}
                       fill
-                      className="object-fill group-hover:scale-105 transition-transform duration-300"
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
                       data-ai-hint={video.thumbnailHint}
                     />
                      <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
@@ -252,7 +252,7 @@ export default function Home() {
                         src={src}
                         alt={`Schedule image ${index + 1}`}
                         fill
-                        className="object-fill rounded-lg"
+                        className="object-cover rounded-lg"
                       />
                     </div>
                   </div>
