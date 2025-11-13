@@ -61,14 +61,14 @@ export default function ContactPage() {
                   <div className="bg-primary/10 text-primary p-3 rounded-full"><Mail className="h-5 w-5" /></div>
                   <div>
                     <h3 className="font-semibold">Email Us</h3>
-                    <p className="text-muted-foreground text-sm">contact@dharmagranth.tv</p>
+                    <p className="text-muted-foreground text-sm">info@dharmagranthtelevision.com</p>
                   </div>
                 </div>
                  <div className="flex items-start gap-4">
                   <div className="bg-primary/10 text-primary p-3 rounded-full"><Phone className="h-5 w-5" /></div>
                   <div>
                     <h3 className="font-semibold">Call Us</h3>
-                    <p className="text-muted-foreground text-sm">+1 (555) 123-4567</p>
+                    <p className="text-muted-foreground text-sm">8700930012</p>
                   </div>
                 </div>
                  <div className="flex items-start gap-4">
