@@ -35,9 +35,9 @@ export const genres = [...new Set(videos.map(v => v.genre))];
 export const teachers = [...new Set(videos.map(v => v.teacher))];
 
 export const schedule: Program[] = [
-    { id: '1', time: '12:00 AM', title: 'BHAJAN', description: 'Soothing devotional music to begin the day.' },
-    { id: '2', time: '04:30 AM', title: 'SUNDARKAND PATH', description: 'Recitation of the sacred Sundarkand.' },
-    { id: '3', time: '06:15 AM', title: 'SALASAR BALA JI AARTI', description: 'Live morning aarti from Salasar Balaji temple.' },
+    { id: '1', time: '12:00 PM', title: 'BHAJAN', description: 'Soothing devotional music to begin the day.' },
+    { id: '2', time: '04:30 PM', title: 'SUNDARKAND PATH', description: 'Recitation of the sacred Sundarkand.' },
+    { id: '3', time: '06:15 PM', title: 'SALASAR BALA JI AARTI', description: 'Live morning aarti from Salasar Balaji temple.' },
     { id: '4', time: '07:00 AM', title: 'KHATU SHYAM JI D-LIVE AARTI', description: 'Direct telecast of the aarti from Khatu Shyam Ji temple.' },
     { id: '5', time: '07:30 AM', title: 'BHAJAN CHALISA', description: 'A collection of powerful bhajans and chalisas.' },
     { id: '6', time: '08:00 AM', title: 'BHAJAN CHALISA', description: 'Continued session of devotional hymns.' },
