@@ -43,7 +43,7 @@ export const schedule: Program[] = [
     { id: '6', time: '08:00 AM', title: 'BHAJAN CHALISA', description: 'Continued session of devotional hymns.' },
     { id: '7', time: '09:00 AM', title: 'JHANDEWALAN MATA LIVE AARTi', description: 'Witness the grand aarti live from Jhandewalan Mata Mandir.' },
     { id: '9', time: '12:00 PM', title: 'JHANDEWALAN MATA LIVE AARTI', description: 'Mid-day aarti live from Jhandewalan Mata Mandir.' },
-    { id: '10', time: '12:30 PM', title: 'KATHA D-LIVE', description: 'Live spiritual discourse from revered saints, running until 9:30 PM.' },
+    { id: '10', time: '12:00 PM', title: 'KATHA D-LIVE', description: 'Live spiritual discourse from revered saints, running until 9:30 PM.' },
     { id: '11', time: '03:00 PM', title: 'KAVI SAMMELAN', description: 'An enriching session of devotional poetry.' },
     { id: '12', time: '04:30 PM', title: 'GAYATRI MANTRA', description: 'Chanting of the powerful Gayatri Mantra for spiritual upliftment.' },
     { id: '13', time: '05:00 PM', title: 'CHALISA', description: 'Recitation of various chalisas for divine blessings.' },
@@ -54,3 +54,4 @@ export const schedule: Program[] = [
     { id: '18', time: '08:05 PM', title: 'DHARMGRANTH TV SPECIAL SHOW', description: 'A special feature presentation from Dharmagranth TV.' },
     { id: '19', time: '09:00 PM', title: 'HANUMANGARHI LIVE AARTI FROM AYODHYA', description: 'Night aarti live from Hanumangarhi, Ayodhya.' },
 ];
+
