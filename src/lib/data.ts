@@ -54,4 +54,3 @@ export const schedule: Program[] = [
     { id: '18', time: '08:05 PM', title: 'DHARMGRANTH TV SPECIAL SHOW', description: 'A special feature presentation from Dharmagranth TV.' },
     { id: '19', time: '09:00 PM', title: 'HANUMANGARHI LIVE AARTI FROM AYODHYA', description: 'Night aarti live from Hanumangarhi, Ayodhya.' },
 ];
-
