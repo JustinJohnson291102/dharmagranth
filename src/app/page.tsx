@@ -140,7 +140,7 @@ export default function Home() {
                       src={src}
                       alt={`Carousel image ${index + 1}`}
                       fill
-                      className="object-cover rounded-lg"
+                      className="object-fill rounded-lg"
                     />
                   </div>
                 </div>
@@ -252,7 +252,7 @@ export default function Home() {
                         src={src}
                         alt={`Schedule image ${index + 1}`}
                         fill
-                        className="object-cover rounded-lg"
+                        className="object-fill rounded-lg"
                       />
                     </div>
                   </div>
@@ -275,6 +275,8 @@ export default function Home() {
     </div>
   );
 }
+
+    
 
     
 
