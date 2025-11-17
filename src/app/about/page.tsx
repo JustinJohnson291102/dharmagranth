@@ -80,21 +80,21 @@ export default function AboutPage() {
 
         <div className="text-center animate-fade-in-up" style={{animationDelay: '0.4s'}}>
           <h2 className="text-3xl font-headline font-bold mb-12">TV Schedule</h2>
-          <Card className="shadow-lg">
+          <Card className="shadow-lg border-2 border-primary/10 bg-card/80 backdrop-blur-sm">
             <Table>
               <TableHeader>
-                <TableRow>
-                  <TableHead>Channel Name</TableHead>
-                  <TableHead>Programme Name</TableHead>
+                <TableRow className="bg-muted/50 hover:bg-muted/50">
+                  <TableHead className="text-left">Channel Name</TableHead>
+                  <TableHead className="text-left">Programme Name</TableHead>
                   <TableHead className="text-right">Airing Time</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
                 {schedule.map((item, index) => (
-                  <TableRow key={index}>
-                    <TableCell>{item.channel}</TableCell>
-                    <TableCell>{item.program}</TableCell>
-                    <TableCell className="text-right">{item.time}</TableCell>
+                  <TableRow key={index} className="transition-colors hover:bg-muted/30">
+                    <TableCell className="text-left">{item.channel}</TableCell>
+                    <TableCell className="text-left">{item.program}</TableCell>
+                    <TableCell className="text-right font-mono">{item.time}</TableCell>
                   </TableRow>
                 ))}
               </TableBody>
