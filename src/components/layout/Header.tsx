@@ -31,7 +31,6 @@ export default function Header() {
         <div className="flex items-center mr-auto">
           <Link href="/" className="flex items-center gap-2">
             <Logo className="h-14 w-14" />
-            <span className="font-headline font-bold text-xl hidden sm:inline-block">Dharmagranth TV</span>
           </Link>
         </div>
 
